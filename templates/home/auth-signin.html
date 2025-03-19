@@ -1,0 +1,40 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} Sign IN {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+	<!-- [ auth-signin ] start -->
+	<div class="auth-wrapper">
+		<div class="auth-content">
+			<div class="card">
+				<div class="row align-items-center text-center">
+					<div class="col-md-12">
+						<div class="card-body">
+							<h5><span class="badge bg-c-blue">TaskFlow Manager</span></h5>
+              <br>
+							<h4 class="mb-3 f-w-400">Sign In</h4>
+							<div class="input-group mb-3">
+								<span class="input-group-text"><i class="feather icon-mail"></i></span>
+								<input type="email" class="form-control" placeholder="Email address">
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text"><i class="feather icon-lock"></i></span>
+								<input type="password" class="form-control" placeholder="Password">
+							</div>
+							<button class="btn btn-block btn-primary mt-2 mb-4">Signin</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- [ auth-signin ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

@@ -1,0 +1,103 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+  <div class="pcoded-main-container" xmlns="http://www.w3.org/1999/html">
+        <div class="pcoded-content">
+          <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">Task Management</h5>
+                            </div>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="#">Task Management</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ Main Content ] start -->
+                <!-- Customer overview start -->
+              <div class="card table-card">
+                        <div class="card-header d-flex justify-content-between">
+                          <h3><span class="badge text-c-blue">Tasks</span></h3>
+                          <a href="" class="btn btn-primary border-0 fs-3 fw-bold rounded-1"><i class="feather icon-plus"></i></a>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <div class="table-responsive">
+                                        <div class="customer-scroll" style="height:362px;position:relative;">
+                                            <table class="table table-hover m-b-0">
+                                                <thead>
+                                                    <tr class="text-center">
+                                                        <th><h5><span class="badge bg-c-blue">Task Name</span></h5></th>
+                                                        <th><h5><span class="badge bg-c-blue">Team</span></h5></th>
+                                                        <th><h5><span class="badge bg-c-blue">Project</span></h5></th>
+                                                        <th><h5><span class="badge bg-c-blue">Priority</span></h5></th>
+                                                        <th><h5><span class="badge bg-c-blue">Task Type</span></h5></th>
+                                                        <th><h5><span class="badge bg-c-blue">Deadline</span></h5></th>
+                                                        <th><h5><span class="badge bg-c-blue">status</span></h5></th>
+                                                        <th><h5><span class="badge bg-c-blue">Info</span></h5></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="text-center">
+                                                      <td class="fs-6 fw-bold rounded-1">Create landing page to User</td>
+                                                      <td class="fs-6 fw-bold rounded-1">Team Names</td>
+                                                      <td class="fs-6 fw-bold rounded-1">ProjectName</td>
+                                                      <td class="fs-6 fw-bold rounded-1">High</td>
+                                                      <td class="fs-6 fw-bold rounded-1 text-c-blue">#Design</td>
+                                                      <td class="fs-6 fw-bold rounded-1">19.12.2025</td>
+                                                      <td class="fs-6 fw-bold rounded-1"><span class="text-white fs-6 fw-bold rounded-1 bg-success p-1">Completed</span></td>
+                                                      <td>
+                                                        <a href="" class="btn btn-primary border-0 fs-5 fw-bold rounded-1"><i class="feather icon-info"></i></a>
+                                                      </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                      <td class="fs-6 fw-bold rounded-1">Create landing page to User</td>
+                                                      <td class="fs-6 fw-bold rounded-1">Team Names</td>
+                                                      <td class="fs-6 fw-bold rounded-1">ProjectName</td>
+                                                      <td class="fs-6 fw-bold rounded-1">High</td>
+                                                      <td class="fs-6 fw-bold rounded-1 text-c-blue">#Design</td>
+                                                      <td class="fs-6 fw-bold rounded-1">19.12.2025</td>
+                                                      <td class="fs-6 fw-bold rounded-1"><span class="text-white fs-6 fw-bold rounded-1 bg-c-yellow p-1">In process</span></td>
+                                                      <td>
+                                                        <a href="" class="btn btn-primary border-0 fs-5 fw-bold rounded-1"><i class="feather icon-info"></i></a>
+                                                      </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Customer overview end -->
+            </div>
+            <!-- [ Main Content ] end -->
+        </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+    <!-- Apex Chart -->
+    <script src="/static/assets/js/plugins/apexcharts.min.js"></script>
+
+    <!-- custom-chart js -->
+    <script src="/static/assets/js/pages/dashboard-main.js"></script>
+
+{% endblock javascripts %}
