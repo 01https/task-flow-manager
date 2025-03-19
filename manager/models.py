@@ -21,7 +21,8 @@ class Task(models.Model):
     task_type = models.ForeignKey("TaskType", on_delete=models.PROTECT)
     assignees = models.ManyToManyField("Worker", related_name="tasks_assigned")
     project = models.ForeignKey(
-        "Project", on_delete=models.PROTECT,
+        "Project",
+        on_delete=models.PROTECT,
         related_name="tasks_project"
     )
     team = models.ManyToManyField("Team", related_name="tasks_team")
@@ -29,6 +30,33 @@ class Task(models.Model):
 
 class TaskType(models.Model):
     name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+
+class Project(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    type = models.ForeignKey(
+        "ProjectType",
+        on_delete=models.PROTECT
+    )
+    teams = models.ManyToManyField(
+        "Team",
+        related_name="project_teams",
+    )
+    tasks = models.ManyToManyField(
+        Task,
+        related_name="project_tasks",
+    )
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+class ProjectType(models.Model):
+    name = models.CharField(max_length=60, unique=True)
 
     def __str__(self):
         return self.name
