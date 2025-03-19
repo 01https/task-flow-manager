@@ -27,6 +27,9 @@ class Task(models.Model):
     )
     team = models.ManyToManyField("Team", related_name="tasks_team")
 
+    def __str__(self):
+        return self.name
+
 
 class TaskType(models.Model):
     name = models.CharField(max_length=50, unique=True)
