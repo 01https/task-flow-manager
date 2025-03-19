@@ -1,4 +1,12 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
+
+
+class TaskType(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Task(models.Model):
@@ -31,8 +39,8 @@ class Task(models.Model):
         return self.name
 
 
-class TaskType(models.Model):
-    name = models.CharField(max_length=50, unique=True)
+class ProjectType(models.Model):
+    name = models.CharField(max_length=60, unique=True)
 
     def __str__(self):
         return self.name
@@ -58,13 +66,6 @@ class Project(models.Model):
         return self.name
 
 
-class ProjectType(models.Model):
-    name = models.CharField(max_length=60, unique=True)
-
-    def __str__(self):
-        return self.name
-
-
 class Team(models.Model):
     name = models.CharField(max_length=100, unique=True)
     members = models.ManyToManyField("Worker", related_name="teams")
@@ -74,3 +75,17 @@ class Team(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Position(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Worker(AbstractUser):
+    position = models.ForeignKey(Position, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.username
