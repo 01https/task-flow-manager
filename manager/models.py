@@ -27,13 +27,13 @@ class Task(models.Model):
         default="Middle"
     )
     task_type = models.ForeignKey("TaskType", on_delete=models.PROTECT)
-    assignees = models.ManyToManyField("Worker", related_name="tasks")
+    assignees = models.ManyToManyField("Worker", related_name="tasks_assigned")
     project = models.ForeignKey(
         "Project",
         on_delete=models.PROTECT,
-        related_name="tasks"
+        related_name="tasks_project"
     )
-    team = models.ManyToManyField("Team", related_name="tasks")
+    team = models.ManyToManyField("Team", related_name="tasks_team")
 
     def __str__(self):
         return self.name
@@ -54,11 +54,11 @@ class Project(models.Model):
     )
     teams = models.ManyToManyField(
         "Team",
-        related_name="projects",
+        related_name="projects_team",
     )
     tasks = models.ManyToManyField(
         Task,
-        related_name="projects",
+        related_name="projects_task",
     )
     description = models.TextField()
 
@@ -68,9 +68,9 @@ class Project(models.Model):
 
 class Team(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    members = models.ManyToManyField("Worker", related_name="teams")
-    projects = models.ManyToManyField("Project", related_name="teams")
-    tasks = models.ManyToManyField("Task", related_name="teams")
+    members = models.ManyToManyField("Worker", related_name="teams_members")
+    projects = models.ManyToManyField("Project", related_name="teams_project")
+    tasks = models.ManyToManyField("Task", related_name="teams_tasks")
     description = models.TextField()
 
     def __str__(self):
