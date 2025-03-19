@@ -63,3 +63,14 @@ class ProjectType(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Team(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    members = models.ManyToManyField("Worker", related_name="teams")
+    projects = models.ManyToManyField("Project", related_name="teams")
+    tasks = models.ManyToManyField("Task", related_name="teams")
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
