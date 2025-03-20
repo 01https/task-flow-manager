@@ -27,14 +27,13 @@
                 <li>
                     <div class="dropdown drp-user">
                         <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <span class="text-white">John Doe <i class="feather icon-user"></i></span>
+                            <span class="text-white">{{ user.username }} <i class="feather icon-user"></i></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end profile-notification">
                             <div class="pro-head">
 
                                 <span>
-                                    {{ request.user.username }}
-                                    Hi , John Doe !
+                                   Hi , {{ user.username }}
                                 </span>
                             </div>
                             <ul class="pro-body">
@@ -45,15 +44,13 @@
                               </li>
                               <hr>
                               <li>
-                                    <a href=""
-                                       class="dropdown-item"><i
-                                            class="feather icon-log-out"></i>Log Out</a>
+                                <form action="{% url "logout" %}" method="post">
+                                  {% csrf_token %}
+                                  <button type="submit" class="dropdown-item">
+                                    Log out
+                                  </button>
+                                </form>
                               </li>
-{#                                <li>#}
-{#                                    <a href="{% url 'logout' %}"#}
-{#                                       class="dropdown-item"><i#}
-{#                                            class="feather icon-lock"></i> Logout</a>#}
-{#                                </li>#}
                             </ul>
                         </div>
                     </div>
