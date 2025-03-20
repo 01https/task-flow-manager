@@ -17,15 +17,24 @@
 							<h5><span class="badge bg-c-blue">TaskFlow Manager</span></h5>
               <br>
 							<h4 class="mb-3 f-w-400">Sign In</h4>
-							<div class="input-group mb-3">
-								<span class="input-group-text"><i class="feather icon-mail"></i></span>
-								<input type="email" class="form-control" placeholder="Email address">
-							</div>
-							<div class="input-group mb-4">
-								<span class="input-group-text"><i class="feather icon-lock"></i></span>
-								<input type="password" class="form-control" placeholder="Password">
-							</div>
-							<button class="btn btn-block btn-primary mt-2 mb-4">Signin</button>
+
+              <form method="post" novalidate>
+                {% csrf_token %}
+                <div class="input-group mb-3">
+								  <span class="input-group-text"><i class="feather icon-user"></i></span>
+                  {{ form.username }}
+							  </div>
+							  <div class="input-group mb-4">
+								  <span class="input-group-text"><i class="feather icon-lock"></i></span>
+								  {{ form.password }}
+							  </div>
+							  <button class="btn btn-block btn-primary mt-2 mb-4">Signin</button>
+              </form>
+              {% if form.errors %}
+								<div class="alert alert-danger">
+									<p>Invalid login or password</p>
+								</div>
+							{% endif %}
 						</div>
 					</div>
 				</div>
