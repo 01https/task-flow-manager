@@ -68,7 +68,6 @@ class Project(models.Model):
 
 class Team(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    members = models.ManyToManyField("Worker", related_name="teams_members")
     projects = models.ManyToManyField("Project", related_name="teams_project")
     tasks = models.ManyToManyField("Task", related_name="teams_tasks")
     description = models.TextField()
@@ -85,7 +84,21 @@ class Position(models.Model):
 
 
 class Worker(AbstractUser):
-    position = models.ForeignKey(Position, on_delete=models.PROTECT)
+    position = models.ForeignKey(
+        Position,
+        on_delete=models.PROTECT,
+        null=True,
+        blank=True,
+        related_name="workers",
+    )
+
+    team = models.ForeignKey(
+        Team,
+        on_delete=models.PROTECT,
+        null=True,
+        blank=True,
+        related_name="members",
+    )
 
     def __str__(self):
         return self.username
