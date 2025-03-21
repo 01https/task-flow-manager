@@ -2,8 +2,8 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.db.models import Count , Q
 from django.shortcuts import render
+from django.views import generic
 
-from generate_fixture import assignees
 from manager.models import Task, Worker
 
 
@@ -31,3 +31,18 @@ def index(request):
 
 
     return render(request, "home/index.html", context=context)
+
+
+class TaskManagementList(generic.ListView):
+    model = Task
+    queryset = Task.objects.all()
+    context_object_name = "tasks"
+    template_name = "home/task_management.html"
+    paginate_by = 10
+
+
+class TaskManagementDetail(generic.DetailView):
+    model = Task
+    queryset = Task.objects.all()
+    context_object_name = "tasks"
+    template_name = "home/task_management_detail.html"
