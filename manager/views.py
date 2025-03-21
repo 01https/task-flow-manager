@@ -74,3 +74,7 @@ class TeamManagementDetail(generic.DetailView):
     queryset = Team.objects.all()
     context_object_name = "teams"
     template_name = "home/team_management_detail.html"
+
+
+def help_page(request):
+    return render(request, "home/help.html")
