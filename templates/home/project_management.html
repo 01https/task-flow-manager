@@ -48,15 +48,17 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                  {% for project in projects %}
                                                     <tr class="text-center">
-                                                      <td class="fs-5 fw-bold rounded-1">TaskFlow Manager</td>
-                                                      <td class="fs-5 fw-bold rounded-1">IT-site</td>
-                                                      <td class="fs-5 fw-bold rounded-1">4</td>
-                                                      <td class="fs-5 fw-bold rounded-1">12</td>
+                                                      <td class="fs-5 fw-bold rounded-1">{{ project.name }}</td>
+                                                      <td class="fs-5 fw-bold rounded-1">{{ project.type }}</td>
+                                                      <td class="fs-5 fw-bold rounded-1">{{ project.teams.count }}</td>
+                                                      <td class="fs-5 fw-bold rounded-1">{{ project.tasks_count }}</td>
                                                       <td>
-                                                        <a href="" class="btn btn-primary border-0 fs-5 fw-bold rounded-1"><i class="feather icon-info"></i></a>
+                                                        <a href="{% url "manager:project_management_detail" pk=project.id %}" class="btn btn-primary border-0 fs-5 fw-bold rounded-1"><i class="feather icon-info"></i></a>
                                                       </td>
                                                     </tr>
+                                                {% endfor %}
                                                 </tbody>
                                             </table>
                                         </div>
