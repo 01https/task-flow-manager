@@ -43,24 +43,20 @@
                                                         <th><h5><span class="badge bg-c-blue">Team Name</span></h5></th>
                                                         <th class="text-center"><h5><span class="badge bg-c-blue">Members</span></h5></th>
                                                         <th><h5><span class="badge bg-c-blue">Projects</span></h5></th>
-                                                        <th><h5><span class="badge bg-c-blue">Completed Task</span></h5></th>
-                                                        <th><h5><span class="badge bg-c-blue">Info</span></h5></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                {% if teams %}
+                                                {% for team in teams %}
                                                     <tr class="text-center">
-                                                      <td class="fs-5 fw-bold rounded-1">QA</td>
-                                                      <td class="fs-5 fw-bold rounded-1">7</td>
-                                                      <td class="fs-5 fw-bold rounded-1">ProjectName</td>
-                                                      <td class="fs-5 fw-bold rounded-1">85
-                                                      <div class="progress mt-1" style="height:4px;">
-                                                                <div class="progress-bar bg-success rounded" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                                      </div>
-                                                      </td>
-                                                      <td>
-                                                        <a href="" class="btn btn-primary border-0 fs-5 fw-bold rounded-1"><i class="feather icon-info"></i></a>
-                                                      </td>
+                                                      <td class="fs-5 fw-bold rounded-1"><a class="link-info" href="{% url "manager:team_management_detail" pk=team.id %}">{{ team.name }}</a></td>
+                                                      <td class="fs-5 fw-bold rounded-1">{{ team.members.count }}</td>
+                                                      <td class="fs-5 fw-bold rounded-1">{{ team.projects_team.first.name }}, ...</td>
                                                     </tr>
+                                                {% endfor %}
+                                                  {% else %}
+                                                  <td class="fs-5 fw-bold rounded-1">Empty</td>
+                                                {% endif %}
                                                 </tbody>
                                             </table>
                                         </div>
