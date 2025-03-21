@@ -1,7 +1,8 @@
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
 
-from manager.views import index, TaskManagementList, TaskManagementDetail, ProjectManagementDetail, ProjectManagement
+from manager.views import index, TaskManagementList, TaskManagementDetail, ProjectManagementDetail, ProjectManagement, \
+    TeamManagement, TeamManagementDetail
 
 app_name = "manager"
 
@@ -17,4 +18,6 @@ urlpatterns = [
     path("task-management/<int:pk>/", TaskManagementDetail.as_view(), name="task_management_detail"),
     path("project-management", ProjectManagement.as_view(), name="project_management"),
     path("project-management/<int:pk>", ProjectManagementDetail.as_view(), name="project_management_detail"),
+    path("team-management", TeamManagement.as_view(), name="team_management"),
+    path("team-management/<int:pk>", TeamManagementDetail.as_view(), name="team_management_detail"),
 ]

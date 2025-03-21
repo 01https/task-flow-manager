@@ -4,7 +4,7 @@ from django.db.models import Count , Q
 from django.shortcuts import render
 from django.views import generic
 
-from manager.models import Task, Worker, Project
+from manager.models import Task, Worker, Project, Team
 
 
 @login_required
@@ -50,17 +50,27 @@ class TaskManagementDetail(generic.DetailView):
 
 class ProjectManagement(generic.ListView):
     model = Project
-    queryset = Project.objects.annotate(
-        tasks_count=Count("tasks_project")
-    )
+    queryset = Project.objects.all()
     context_object_name = "projects"
     template_name = "home/project_management.html"
 
 
 class ProjectManagementDetail(generic.DetailView):
     model = Project
-    queryset = Project.objects.annotate(
-        tasks_count=Count("tasks_project")
-    )
+    queryset = Project.objects.all()
     context_object_name = "projects"
     template_name = "home/project_management_detail.html"
+
+
+class TeamManagement(generic.ListView):
+    model = Team
+    queryset = Team.objects.all()
+    context_object_name = "teams"
+    template_name = "home/team_management.html"
+
+
+class TeamManagementDetail(generic.DetailView):
+    model = Team
+    queryset = Team.objects.all()
+    context_object_name = "teams"
+    template_name = "home/team_management_detail.html"
