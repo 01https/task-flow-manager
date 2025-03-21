@@ -18,7 +18,7 @@ class Task(models.Model):
     ]
 
     name = models.CharField(max_length=255)
-    description = models.TextField()
+    description = models.TextField(blank=True)
     deadline = models.DateField()
     is_completed = models.BooleanField(default=False)
     priority = models.CharField(
@@ -33,7 +33,7 @@ class Task(models.Model):
         on_delete=models.PROTECT,
         related_name="tasks_project"
     )
-    team = models.ManyToManyField("Team", related_name="tasks_team")
+    teams = models.ManyToManyField("Team", related_name="tasks_team")
 
     def __str__(self):
         return self.name
@@ -56,7 +56,7 @@ class Project(models.Model):
         "Team",
         related_name="projects_team",
     )
-    description = models.TextField()
+    description = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
@@ -64,9 +64,7 @@ class Project(models.Model):
 
 class Team(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    projects = models.ManyToManyField("Project", related_name="teams_project")
-    tasks = models.ManyToManyField("Task", related_name="teams_tasks")
-    description = models.TextField()
+    description = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
