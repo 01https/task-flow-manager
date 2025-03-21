@@ -56,10 +56,6 @@ class Project(models.Model):
         "Team",
         related_name="projects_team",
     )
-    tasks = models.ManyToManyField(
-        Task,
-        related_name="projects_task",
-    )
     description = models.TextField()
 
     def __str__(self):
