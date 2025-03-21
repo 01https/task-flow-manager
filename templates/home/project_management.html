@@ -44,19 +44,15 @@
                                                         <th><h5><span class="badge bg-c-blue">Type</span></h5></th>
                                                         <th><h5><span class="badge bg-c-blue">Teams</span></h5></th>
                                                         <th><h5><span class="badge bg-c-blue">Tasks</span></h5></th>
-                                                        <th><h5><span class="badge bg-c-blue">Info</span></h5></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                   {% for project in projects %}
                                                     <tr class="text-center">
-                                                      <td class="fs-5 fw-bold rounded-1">{{ project.name }}</td>
+                                                      <td class="fs-5 fw-bold rounded-1"><a class="link-info" href="{% url "manager:project_management_detail" pk=project.id %}">{{ project.name }}</a></td>
                                                       <td class="fs-5 fw-bold rounded-1">{{ project.type }}</td>
                                                       <td class="fs-5 fw-bold rounded-1">{{ project.teams.count }}</td>
-                                                      <td class="fs-5 fw-bold rounded-1">{{ project.tasks_count }}</td>
-                                                      <td>
-                                                        <a href="{% url "manager:project_management_detail" pk=project.id %}" class="btn btn-primary border-0 fs-5 fw-bold rounded-1"><i class="feather icon-info"></i></a>
-                                                      </td>
+                                                      <td class="fs-5 fw-bold rounded-1">{{ project.tasks_project.count }}</td>
                                                     </tr>
                                                 {% endfor %}
                                                 </tbody>

@@ -40,7 +40,11 @@
                     </div>
                   </div>
                 <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-users"></i> Teams: </strong>
-                  {% for team in tasks.team.all %} {{ team }},
+                  {% for team in tasks.teams.all %} {{ team }} |
+                  {% endfor %}
+                </p>
+                <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-user"></i> Assignees: </strong>
+                  {% for worker in tasks.assignees.all %} <a class="link-info" href="">@{{ worker }}</a> |
                   {% endfor %}
                 </p>
                   <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-type"></i> Project:</strong> {{ tasks.project }}</p>

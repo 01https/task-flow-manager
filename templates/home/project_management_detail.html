@@ -41,11 +41,11 @@
                   </div>
                   <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-users"></i> Teams:</strong>
                     {% for team in projects.teams.all %}
-                    {{ team }},
+                    {{ team }} |
                     {% endfor %}
                   </p>
                   <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-type"></i> Type:</strong> {{ projects.type }}</p>
-                  <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-layers"></i> Tasks in project:</strong> {{ projects.tasks_count }}</p>
+                  <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-layers"></i> Tasks in project:</strong> {{ projects.tasks_project.count}}</p>
                   <hr>
                   <p class="mb-0 fs-5 w-50"><i class="feather icon-info"></i><strong> Description:</strong></p>
                   <p class="w-50 fs-5">{{ projects.description }}</p>
