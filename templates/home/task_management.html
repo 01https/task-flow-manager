@@ -30,6 +30,7 @@
               <div class="card table-card">
                         <div class="card-header d-flex justify-content-between">
                           <h3><span class="badge text-c-blue">Tasks</span></h3>
+                          {% include "includes/pagination.html" %}
                           <a href="" class="btn btn-primary border-0 fs-3 fw-bold rounded-1"><i class="feather icon-plus"></i></a>
                         </div>
                         <div class="card-body p-0">
@@ -51,30 +52,28 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                {% if tasks %}
+                                                  {% for task in tasks %}
                                                     <tr class="text-center">
-                                                      <td class="fs-6 fw-bold rounded-1">Create landing page to User</td>
-                                                      <td class="fs-6 fw-bold rounded-1">Team Names</td>
-                                                      <td class="fs-6 fw-bold rounded-1">ProjectName</td>
-                                                      <td class="fs-6 fw-bold rounded-1">High</td>
-                                                      <td class="fs-6 fw-bold rounded-1 text-c-blue">#Design</td>
-                                                      <td class="fs-6 fw-bold rounded-1">19.12.2025</td>
+                                                      <td class="fs-6 fw-bold rounded-1">{{ task.name }}</td>
+                                                      <td class="fs-6 fw-bold rounded-1">{{ task.team.first.name }} ...and other</td>
+                                                      <td class="fs-6 fw-bold rounded-1">{{ task.project.name }}</td>
+                                                      <td class="fs-6 fw-bold rounded-1">{{ task.priority }}</td>
+                                                      <td class="fs-6 fw-bold rounded-1 text-c-blue">#{{ task.task_type }}</td>
+                                                      <td class="fs-6 fw-bold rounded-1">{{ task.deadline }}</td>
+                                                      {% if task.is_completed %}
                                                       <td class="fs-6 fw-bold rounded-1"><span class="text-white fs-6 fw-bold rounded-1 bg-success p-1">Completed</span></td>
+                                                        {% else %}
+                                                        <td class="fs-6 fw-bold rounded-1"><span class="text-white fs-6 fw-bold rounded-1 bg-danger p-1">In process</span></td>
+                                                      {% endif %}
                                                       <td>
-                                                        <a href="" class="btn btn-primary border-0 fs-5 fw-bold rounded-1"><i class="feather icon-info"></i></a>
+                                                        <a href="{% url "manager:task_management_detail" pk=task.id %}" class="btn btn-primary border-0 fs-5 fw-bold rounded-1"><i class="feather icon-info"></i></a>
                                                       </td>
                                                     </tr>
-                                                    <tr class="text-center">
-                                                      <td class="fs-6 fw-bold rounded-1">Create landing page to User</td>
-                                                      <td class="fs-6 fw-bold rounded-1">Team Names</td>
-                                                      <td class="fs-6 fw-bold rounded-1">ProjectName</td>
-                                                      <td class="fs-6 fw-bold rounded-1">High</td>
-                                                      <td class="fs-6 fw-bold rounded-1 text-c-blue">#Design</td>
-                                                      <td class="fs-6 fw-bold rounded-1">19.12.2025</td>
-                                                      <td class="fs-6 fw-bold rounded-1"><span class="text-white fs-6 fw-bold rounded-1 bg-c-yellow p-1">In process</span></td>
-                                                      <td>
-                                                        <a href="" class="btn btn-primary border-0 fs-5 fw-bold rounded-1"><i class="feather icon-info"></i></a>
-                                                      </td>
-                                                    </tr>
+                                                  {% endfor %}
+                                                  {% else %}
+                                                  <td class="fs-6 fw-bold rounded-1">Empty</td>
+                                                {% endif %}
                                                 </tbody>
                                             </table>
                                         </div>
