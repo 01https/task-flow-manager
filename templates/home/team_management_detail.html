@@ -10,28 +10,14 @@
 	<!-- [ Main Content ] start -->
 	<div class="pcoded-main-container">
 		<div class="pcoded-content">
-			<!-- [ breadcrumb ] start -->
-			<div class="page-header">
-				<div class="page-block">
-					<div class="row align-items-center">
-						<div class="col-md-12">
-							<div class="page-header-title">
-								<h5 class="m-b-10">TeamName Info</h5>
-							</div>
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
-								<li class="breadcrumb-item"><a href="#">Team Management</a></li>
-								<li class="breadcrumb-item"><a href="#"></a>TeamName Info</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- [ breadcrumb ] end -->
 			<!-- [ Main Content ] start -->
 			<div class="row">
               <div class="card">
                 <div class="card-body">
+                  <ul class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+								    <li class="breadcrumb-item"><a href="{% url "manager:team_management" %}">Team Management</a></li>
+							    </ul>
                   <div class="d-flex justify-content-between align-items-center">
                     <h5 class="card-title fw-bold"><i class="feather icon-users"></i> Team: <span class="fw-normal">{{ teams.name }}</span></h5>
                     <div class="d-flex gap-2">
@@ -41,7 +27,7 @@
                   </div>
                   <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-user"></i> Members:</strong>
                     {% for user in teams.members.all %}
-                      <a class="link-info" href="">@{{ user.username }}</a> |
+                      <a class="link-info" href="{% url "manager:user_profile" pk=user.id %}">@{{ user.username }}</a> |
                     {% endfor %}
                   </p>
                   <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-folder "></i> Project:</strong>
@@ -51,9 +37,6 @@
 
                   </p>
                   <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-layers"></i>  Tasks in team:</strong> {{ teams.tasks_team.count }}</p>
-                  <hr>
-                  <p class="mb-0 fs-5 w-50"><i class="feather icon-info"></i><strong> Description:</strong></p>
-                  <p class="w-50 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
                 </div>
         </div>
 			</div>

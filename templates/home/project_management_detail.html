@@ -10,28 +10,14 @@
 	<!-- [ Main Content ] start -->
 	<div class="pcoded-main-container">
 		<div class="pcoded-content">
-			<!-- [ breadcrumb ] start -->
-			<div class="page-header">
-				<div class="page-block">
-					<div class="row align-items-center">
-						<div class="col-md-12">
-							<div class="page-header-title">
-								<h5 class="m-b-10">ProjectName Info</h5>
-							</div>
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
-								<li class="breadcrumb-item"><a href="#">Project Management</a></li>
-								<li class="breadcrumb-item"><a href="#"></a>ProjectName Info</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- [ breadcrumb ] end -->
 			<!-- [ Main Content ] start -->
 			<div class="row">
               <div class="card">
                 <div class="card-body">
+                  <ul class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                    <li class="breadcrumb-item"><a href="{% url "manager:project_management" %}">Project Management</a></li>
+							    </ul>
                   <div class="d-flex justify-content-between align-items-center">
                     <h5 class="card-title fw-bold"><i class="feather icon-folder"></i> Project: <span class="fw-normal">{{ projects.name }}</span></h5>
                     <div class="d-flex gap-2">

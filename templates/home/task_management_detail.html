@@ -10,28 +10,14 @@
 	<!-- [ Main Content ] start -->
 	<div class="pcoded-main-container">
 		<div class="pcoded-content">
-			<!-- [ breadcrumb ] start -->
-			<div class="page-header">
-				<div class="page-block">
-					<div class="row align-items-center">
-						<div class="col-md-12">
-							<div class="page-header-title">
-								<h5 class="m-b-10">TaskName Info</h5>
-							</div>
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
-								<li class="breadcrumb-item"><a href="#">Task Management</a></li>
-								<li class="breadcrumb-item"><a href="#"></a>TaskName Info</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- [ breadcrumb ] end -->
 			<!-- [ Main Content ] start -->
 			<div class="row">
               <div class="card">
-                <p class="card-body">
+                <div class="card-body">
+                  <ul class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+								    <li class="breadcrumb-item"><a href="{% url "manager:task_management" %}">Task Management</a></li>
+							    </ul>
                   <div class="d-flex justify-content-between align-items-center">
                     <h5 class="card-title fw-bold"><i class="feather icon-list"></i> Task: <span class="fw-normal">{{ tasks.name }}</span></h5>
                     <div class="d-flex gap-2">
@@ -39,12 +25,9 @@
                       <a href="" class="btn btn-danger border-0 fs-5 fw-bold rounded-1"><i class="feather icon-delete"></i></a>
                     </div>
                   </div>
-                <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-users"></i> Teams: </strong>
-                  {% for team in tasks.teams.all %} {{ team }} |
-                  {% endfor %}
-                </p>
                 <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-user"></i> Assignees: </strong>
-                  {% for worker in tasks.assignees.all %} <a class="link-info" href="">@{{ worker }}</a> |
+                  {% for worker in tasks.assignees.all %}
+                    <a class="link-info" href="{% url "manager:user_profile" pk=worker.id %}">@{{ worker }}</a> |
                   {% endfor %}
                 </p>
                   <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-type"></i> Project:</strong> {{ tasks.project }}</p>
