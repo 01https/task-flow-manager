@@ -76,5 +76,21 @@ class TeamManagementDetail(generic.DetailView):
     template_name = "home/team_management_detail.html"
 
 
+class CurrentUserProfile(generic.DetailView):
+    model = Worker
+    queryset = Worker.objects.all()
+    context_object_name = "user"
+    template_name = "home/user_profile.html"
+
+    def get_object(self, **kwargs):
+        return Worker.objects.get(pk=self.request.user.pk)
+
+class UserProfile(generic.DetailView):
+    model = Worker
+    queryset = Worker.objects.all()
+    context_object_name = "user"
+    template_name = "home/user_profile.html"
+
+
 def help_page(request):
     return render(request, "home/help.html")
