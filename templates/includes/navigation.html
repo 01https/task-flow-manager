@@ -27,18 +27,18 @@
                 <li>
                     <div class="dropdown drp-user">
                         <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <span class="text-white">{{ user.username }} <i class="feather icon-user"></i></span>
+                            <span class="text-white">{{ request.user.username }} <i class="feather icon-user"></i></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end profile-notification">
                             <div class="pro-head">
 
                                 <span>
-                                   Hi , {{ user.username }}
+                                   Hi , {{ request.user.username }}
                                 </span>
                             </div>
                             <ul class="pro-body">
                               <li>
-                                    <a href=""
+                                    <a href="{% url "manager:current_profile" %}"
                                        class="dropdown-item"><i
                                             class="feather icon-user"></i>My Profile</a>
                               </li>
