@@ -16,11 +16,23 @@
                     <div class="row align-items-center">
                         <div class="col-md-12">
                             <div class="page-header-title">
-                                <h5 class="m-b-10">My Profile</h5>
+                                <h5 class="m-b-10">
+                                  {% if request.user == user %}
+                                  	My Profile
+                                    {% else %}
+                                    Profile: {{ user.username }}
+                                  {% endif %}
+                                </h5>
                             </div>
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
-                                <li class="breadcrumb-item"><a href="#">My Profile</a></li>
+                                <li class="breadcrumb-item"><a href="#">
+                                  {% if request.user == user %}
+                                  	My Profile
+                                    {% else %}
+                                    Profile: {{ user.username }}
+                                  {% endif %}
+                                </a></li>
                             </ul>
                         </div>
                     </div>
@@ -36,28 +48,28 @@
             <div class="card">
                 <div class="card-body">
                     <!-- Username -->
-                    <h3 class="card-title text-center mb-3"><i class="feather icon-user"></i>Username</h3>
+                    <h3 class="card-title text-center mb-3"><i class="feather icon-user"></i>{{ user.username }}</h3>
 
                     <!-- Full Name -->
-                    <p class="fs-5 mb-2"><i class="feather icon-edit-2"></i><strong> Full Name:</strong> John Doe</p>
+                    <p class="fs-5 mb-2"><i class="feather icon-edit-2"></i><strong> Full Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
 
                     <!-- Position -->
-                    <p class="fs-5 mb-2"><i class="feather icon-star"></i><strong> Position:</strong> Software Engineer</p>
+                    <p class="fs-5 mb-2"><i class="feather icon-star"></i><strong> Position:</strong> {{ user.position }}</p>
 
-                    <p class="fs-5 mb-2"><i class="feather icon-mail"></i><strong> E-mail:</strong> test@test.com</p>
+                    <p class="fs-5 mb-2"><i class="feather icon-mail"></i><strong> E-mail:</strong> {{ user.email }}</p>
                     <!-- Team -->
-                    <p class="fs-5 mb-2"><i class="feather icon-users"></i><strong> Team:</strong> Development</p>
+                    <p class="fs-5 mb-2"><i class="feather icon-users"></i><strong> Team:</strong> {{ user.team }}</p>
 
-                    <!-- Description -->
-                    <p class="fs-5 mb-2"><i class="feather icon-info"></i><strong> Description:</strong> Passionate about building scalable applications and solving complex problems. Always eager to learn and collaborate with others.</p>
 
 
                 </div>
 
                 <!-- Button -->
-                <div class="card-footer text-center">
+                {% if request.user == user %}
+                  <div class="card-footer text-center">
                     <a href="#" class="btn btn-primary w-100">Edit Profile</a>
-                </div>
+                  </div>
+                {% endif %}
             </div>
         </div>
 </div>
