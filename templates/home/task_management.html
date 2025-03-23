@@ -31,7 +31,7 @@
                         <div class="card-header d-flex justify-content-between">
                           <h3><span class="badge text-c-blue">Tasks</span></h3>
                           {% include "includes/pagination.html" %}
-                          <a href="" class="btn btn-primary border-0 fs-3 fw-bold rounded-1"><i class="feather icon-plus"></i></a>
+                          <a href="{% url "manager:task_create" %}" class="btn btn-primary border-0 fs-3 fw-bold rounded-1"><i class="feather icon-plus"></i></a>
                         </div>
                         <div class="card-body p-0">
                             <div class="tab-content" id="pills-tabContent">
