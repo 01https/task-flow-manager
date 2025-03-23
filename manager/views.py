@@ -2,8 +2,10 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.db.models import Count , Q
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views import generic
 
+from manager.forms import TaskForm
 from manager.models import Task, Worker, Project, Team
 
 
@@ -46,6 +48,13 @@ class TaskManagementDetail(generic.DetailView):
     queryset = Task.objects.all()
     context_object_name = "tasks"
     template_name = "home/task_management_detail.html"
+
+
+class TaskManagementCreate(generic.CreateView):
+    model = Task
+    form_class = TaskForm
+    success_url = reverse_lazy("manager:task_management")
+    template_name = "home/task_form.html"
 
 
 class ProjectManagement(generic.ListView):
