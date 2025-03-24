@@ -67,7 +67,7 @@
                 <!-- Button -->
                 {% if request.user == user %}
                   <div class="card-footer text-center">
-                    <a href="#" class="btn btn-primary w-100">Edit Profile</a>
+                    <a href="{% url "manager:current_profile_update" pk=request.user.id %}" class="btn btn-primary w-100">Edit Profile</a>
                   </div>
                 {% endif %}
             </div>
