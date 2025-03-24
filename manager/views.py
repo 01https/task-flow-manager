@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from manager.forms import TaskForm
+from manager.forms import TaskForm, ProjectForm
 from manager.models import Task, Worker, Project, Team
 
 
@@ -84,6 +84,13 @@ class ProjectManagementDetail(generic.DetailView):
     queryset = Project.objects.all()
     context_object_name = "projects"
     template_name = "home/project_management_detail.html"
+
+
+class ProjectManagementCreate(generic.CreateView):
+    model = Project
+    form_class = ProjectForm
+    success_url = reverse_lazy("manager:project_management")
+    template_name = "home/project_form.html"
 
 
 class TeamManagement(generic.ListView):
