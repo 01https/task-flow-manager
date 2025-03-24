@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from manager.forms import TaskForm, ProjectForm, TeamForm
+from manager.forms import TaskForm, ProjectForm, TeamForm, WorkerForm
 from manager.models import Task, Worker, Project, Team
 
 
@@ -37,7 +37,7 @@ def index(request):
 
 class TaskManagementList(generic.ListView):
     model = Task
-    queryset = Task.objects.all()
+    queryset = Task.objects.all().order_by("is_completed")
     context_object_name = "tasks"
     template_name = "home/task_management.html"
     paginate_by = 10
@@ -182,6 +182,18 @@ class UserProfile(generic.DetailView):
     queryset = Worker.objects.all()
     context_object_name = "user"
     template_name = "home/user_profile.html"
+
+
+class CurrentUserProfileUpdate(generic.UpdateView):
+    model = Worker
+    form_class = WorkerForm
+    template_name = "home/worker_form.html"
+
+    def get_success_url(self):
+        return reverse_lazy("manager:user_profile", kwargs={"pk": self.object.pk})
+
+    def get_object(self, **kwargs):
+        return self.request.user
 
 
 def help_page(request):
