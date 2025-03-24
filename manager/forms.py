@@ -2,9 +2,10 @@ from xmlrpc.client import FastParser
 
 from django import forms
 from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.forms import DateInput
 
-from manager.models import Task, Team, Project
+from manager.models import Task, Team, Project, Worker
 
 
 class TaskForm(forms.ModelForm):
@@ -52,3 +53,11 @@ class TeamForm(forms.ModelForm):
     class Meta:
         model = Team
         fields = "__all__"
+
+
+class WorkerForm(UserChangeForm):
+    password = None
+
+    class Meta:
+        model = Worker
+        fields = ("username", "first_name", "last_name",  "position",  "email", "team")
