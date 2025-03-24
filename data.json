@@ -1,0 +1,4618 @@
+[
+    {
+        "model": "manager.tasktype",
+        "pk": 1,
+        "fields": {
+            "name": "Design"
+        }
+    },
+    {
+        "model": "manager.tasktype",
+        "pk": 2,
+        "fields": {
+            "name": "FixBug"
+        }
+    },
+    {
+        "model": "manager.tasktype",
+        "pk": 3,
+        "fields": {
+            "name": "Back-end"
+        }
+    },
+    {
+        "model": "manager.tasktype",
+        "pk": 4,
+        "fields": {
+            "name": "Front-end"
+        }
+    },
+    {
+        "model": "manager.tasktype",
+        "pk": 5,
+        "fields": {
+            "name": "Database"
+        }
+    },
+    {
+        "model": "manager.tasktype",
+        "pk": 6,
+        "fields": {
+            "name": "Testing"
+        }
+    },
+    {
+        "model": "manager.tasktype",
+        "pk": 7,
+        "fields": {
+            "name": "Deployment"
+        }
+    },
+    {
+        "model": "manager.tasktype",
+        "pk": 8,
+        "fields": {
+            "name": "Documentation"
+        }
+    },
+    {
+        "model": "manager.position",
+        "pk": 1,
+        "fields": {
+            "name": "Python Developer"
+        }
+    },
+    {
+        "model": "manager.position",
+        "pk": 2,
+        "fields": {
+            "name": "Java Developer"
+        }
+    },
+    {
+        "model": "manager.position",
+        "pk": 3,
+        "fields": {
+            "name": "QA Engineer"
+        }
+    },
+    {
+        "model": "manager.position",
+        "pk": 4,
+        "fields": {
+            "name": "Designer"
+        }
+    },
+    {
+        "model": "manager.position",
+        "pk": 5,
+        "fields": {
+            "name": "DevOps"
+        }
+    },
+    {
+        "model": "manager.position",
+        "pk": 6,
+        "fields": {
+            "name": "Data Scientist"
+        }
+    },
+    {
+        "model": "manager.position",
+        "pk": 7,
+        "fields": {
+            "name": "System Administrator"
+        }
+    },
+    {
+        "model": "manager.position",
+        "pk": 8,
+        "fields": {
+            "name": "Project Manager"
+        }
+    },
+    {
+        "model": "manager.team",
+        "pk": 1,
+        "fields": {
+            "name": "Python Developers",
+            "description": "Team of Python Developers"
+        }
+    },
+    {
+        "model": "manager.team",
+        "pk": 2,
+        "fields": {
+            "name": "Java Developers",
+            "description": "Team of Java Developers"
+        }
+    },
+    {
+        "model": "manager.team",
+        "pk": 3,
+        "fields": {
+            "name": "QA Engineers",
+            "description": "Team of QA Engineers"
+        }
+    },
+    {
+        "model": "manager.team",
+        "pk": 4,
+        "fields": {
+            "name": "Designers",
+            "description": "Team of Designers"
+        }
+    },
+    {
+        "model": "manager.team",
+        "pk": 5,
+        "fields": {
+            "name": "DevOps",
+            "description": "Team of DevOps"
+        }
+    },
+    {
+        "model": "manager.team",
+        "pk": 6,
+        "fields": {
+            "name": "Data Scientists",
+            "description": "Team of Data Scientists"
+        }
+    },
+    {
+        "model": "manager.team",
+        "pk": 7,
+        "fields": {
+            "name": "System Administrators",
+            "description": "Team of System Administrators"
+        }
+    },
+    {
+        "model": "manager.team",
+        "pk": 8,
+        "fields": {
+            "name": "Project Managers",
+            "description": "Team of Project Managers"
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$0ImovrYFf1htSmfUgScuRR$ytBnR8R43GxoSTwVsxynwC90yKUURZa/GgFvlJnA7g0=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "gwilson",
+            "first_name": "Wayne",
+            "last_name": "Moss",
+            "email": "ajohnson@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 1,
+            "team": 1
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$CRennT3OXDGdJLiYB6k7sf$ymY9+Fn1zTxbCKxmZuYocbWLB7+/JuzgcavzBpEwLvg=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "hbarry",
+            "first_name": "Katrina",
+            "last_name": "Murphy",
+            "email": "laurarodgers@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 2,
+            "team": 2
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$UjkFtO9t82D5z3nLHxuWKq$ZKXoTyYenwvZX39qcfzcEU3R7SsFcw8S5jf0loyxTU4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "trice",
+            "first_name": "Rebecca",
+            "last_name": "Mcbride",
+            "email": "ghawkins@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 3,
+            "team": 3
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$9JZepSQCYqEZ7XKSZ5ng0S$HLxo0kHPH7exKTaB5uC6EE6kpO9+EKTWWseOrMSYgnM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "dgonzalez",
+            "first_name": "John",
+            "last_name": "Bowman",
+            "email": "vochoa@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 4,
+            "team": 4
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$xmo8O1DuycuKgFHuQg7wcN$LtzDeFy113xQsOXI3VIdsYl/mvh+L+0e0vDx5AUss9Y=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "evelyndavidson",
+            "first_name": "Tina",
+            "last_name": "Hoffman",
+            "email": "debra22@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 5,
+            "team": 5
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 6,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$zjHa3yCZxg9CZeYw97yMqB$Z382qJKfBBmjuAQm2owNvDcKRbRI7o3Q4LrSiJwkJms=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "nanderson",
+            "first_name": "Alyssa",
+            "last_name": "Wilson",
+            "email": "hillphillip@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 6,
+            "team": 6
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 7,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$QNf1vbAHFsKUBinrumNDmw$HL1EmcLctqcT78nbL2U6q8FSEljio3pIIGvnaCOYdog=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "rrivas",
+            "first_name": "Pamela",
+            "last_name": "Henson",
+            "email": "janicewatkins@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 7,
+            "team": 7
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 8,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$FXwi1h6MLSWLpwssitSFrD$9qfMUw9vpnOeD/4yJ0XTGo+k3m8IzEUnHOJNzbMKGV0=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "stanleycummings",
+            "first_name": "Theresa",
+            "last_name": "Davis",
+            "email": "nancy63@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 8,
+            "team": 8
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 9,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$qFQkaUIZYD4JJ10wUZSjY8$TEOxCeZyqR1k8Qo9oVaoDc1W+czjUH0wYAYwVNlo4WY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "ibarber",
+            "first_name": "Chelsea",
+            "last_name": "Cooper",
+            "email": "heidiholder@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 1,
+            "team": 1
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 10,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$z4zHA8DYyhFGojEj4VrHIO$ZVES5LjKZAUA9Av+FzK/dpfXQAYBzfG3lnKapC7+YJA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "inixon",
+            "first_name": "Shirley",
+            "last_name": "Lewis",
+            "email": "rtaylor@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 2,
+            "team": 2
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 11,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$iaEn5VdtSB5k3MiKi8yVnU$TMskW0yTNAME69kYekOjCrrFPKDx/oY29rL1F8NrYKE=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "melissa54",
+            "first_name": "Michael",
+            "last_name": "Ellis",
+            "email": "megan24@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 3,
+            "team": 3
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 12,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$YjTnrmcbWs5DONtcs5146q$9uJFQyr6EYkYrkQcuDMxWAyGgFHugbJcFQD6zh5BfyM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "ramirezmary",
+            "first_name": "Vincent",
+            "last_name": "Johnson",
+            "email": "narias@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 4,
+            "team": 4
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 13,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$icW0eqSfyTFUhXdd0xWHN8$a2J9R9E2rKig7N2cMUjzTUUbJIs1MlSIoNdUaXI8W5Y=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "brendabrown",
+            "first_name": "Lauren",
+            "last_name": "Mckenzie",
+            "email": "onealwilliam@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 5,
+            "team": 5
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 14,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$l8gAV4dVyQ7vV5qXPr6A0H$kKjzBKBb2WGSmMHh8Bh4kEDZCtJg6Q7GGRq356MgMqQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "penningtonallison",
+            "first_name": "Michele",
+            "last_name": "Gonzales",
+            "email": "tanyalogan@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 6,
+            "team": 6
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 15,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$Ij4kOJClwZjZept3zRs29l$WwKDL+TiHYs0VEy8N7IF5O+ioIxXM+iB+ouK68tbW9s=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "rachel96",
+            "first_name": "Elizabeth",
+            "last_name": "Burton",
+            "email": "ramosfrank@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 7,
+            "team": 7
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 16,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$6gNecNucX5BAtg1mPmQeUT$FimiBhSdYm5zf9V+dTJkqDGB+bnEZxQ7/twhHsxp0Tg=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "jvargas",
+            "first_name": "Joanne",
+            "last_name": "Washington",
+            "email": "jonathan51@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 8,
+            "team": 8
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 17,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$n9aZis2bytX1Xdrx4peuRJ$N5nIH/lbP3MHRPTvRBvSeA3uemL5o5R1Zpl13pWfkKw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "michelle70",
+            "first_name": "Justin",
+            "last_name": "Carter",
+            "email": "rachelmcpherson@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 1,
+            "team": 1
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 18,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$vfqRcLXc817oOJyQivKMf6$xLFHH3gmPJNlGzZzHPKxjmYGxITq17+knK1f37v3/Og=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "nlutz",
+            "first_name": "Janet",
+            "last_name": "Ramirez",
+            "email": "colliermackenzie@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 2,
+            "team": 2
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 19,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$AqQzndBcComEotFzITAFM6$j/6ggdDFYn0J4FSk7ZTk4+VfAMVPSi4gopOkaM3b66Q=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "robinsondonna",
+            "first_name": "Diane",
+            "last_name": "Peterson",
+            "email": "joseph89@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 3,
+            "team": 3
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 20,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$YRLyNwfWi662XS7JLGmvVQ$0RwfrurAIhWFC28cJ8j8Z6ENoXYGZ2ApaHGth6YPqM0=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "ericcarter",
+            "first_name": "Harry",
+            "last_name": "Horton",
+            "email": "krista52@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 4,
+            "team": 4
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 21,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$fBfID38Yi8Wgw9ze4iQ9Lq$EHx3c9Ig1Wngy6ktVhb2geOpvQFpf5+KOtFc/BMfY64=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "smithkent",
+            "first_name": "Stephanie",
+            "last_name": "Hampton",
+            "email": "umiller@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 5,
+            "team": 5
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 22,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$hFZOxZhHIbCbYE3rntpg7J$0htABbIAgMEu90mbfPrMhWMb4FUWE919Qe268vVs96E=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "dianadawson",
+            "first_name": "Sheena",
+            "last_name": "Roberson",
+            "email": "codybaker@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 6,
+            "team": 6
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 23,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$c76LTFvnqexVuPU1ixVdbW$UKQFHO1xGKzYlrzcTlVU89smP2eI4x4uAN9slYirzHw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "shirley33",
+            "first_name": "Melissa",
+            "last_name": "Tran",
+            "email": "christinecarpenter@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 7,
+            "team": 7
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 24,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$64Joxz58ni3jXCchwpPKZM$g9v92NYh8OYhFzSmyKUwpYiOsjRNr1+5jDis1CMaQe8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "mariaandrade",
+            "first_name": "William",
+            "last_name": "Jennings",
+            "email": "claire80@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 8,
+            "team": 8
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 25,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$Udujc9l293o8FSaeEeWT91$4SqEjhGMUeiCYg1TGRXZgcBzBNA+bSkCshVQnPhou6E=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "holly47",
+            "first_name": "Carlos",
+            "last_name": "Morton",
+            "email": "wyattharris@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 1,
+            "team": 1
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 26,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$VVNTO2aJ8mfGi3CBl4gQH3$hc7XpT1tq1rJ4da5ivWVscm0Fc/nWEgORkEl0BezvYY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "melissa74",
+            "first_name": "Nathan",
+            "last_name": "Gray",
+            "email": "abigailcain@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 2,
+            "team": 2
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 27,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$ILqi5neE5IkLN1DsTFChcI$L2jIJj3MbC2473asetsfdp9PmYc/9GKvsFtsbWTwEik=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "rwalton",
+            "first_name": "Christina",
+            "last_name": "Rodriguez",
+            "email": "jenniferspears@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 3,
+            "team": 3
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 28,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$47ZVc8Nij5soF5WOGLQmQm$u1B38LG0Iu/lVTP9DNjoA8CbEs3ehIiFlSEeuy1Iotk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "anthonygarcia",
+            "first_name": "George",
+            "last_name": "Choi",
+            "email": "sullivanbrandon@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 4,
+            "team": 4
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 29,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$Z0v2oyLHDDzNAAJPyu0det$BA3RGNmcfZhRo/Is+2yk4g/VaY+v3re/8pYPvinsOP0=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "willisamber",
+            "first_name": "Michelle",
+            "last_name": "Stokes",
+            "email": "jessicasampson@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 5,
+            "team": 5
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 30,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$MU5VC0MG7e2xuLRK84GWUw$tsKSkFfxZ+Y9io1/0GEMdEAOshLpTqLYSGw9xpOXsOU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "michaelnguyen",
+            "first_name": "Nicholas",
+            "last_name": "Marquez",
+            "email": "dclements@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 6,
+            "team": 6
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 31,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$jwRO1ulVHl69ywflkuIPaq$oh0cJaSIOn+b3BvQvHS1Twbl4eW0PQoy7WtJGJpP4Q8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "pryan",
+            "first_name": "Brian",
+            "last_name": "Carlson",
+            "email": "taylorrivera@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 7,
+            "team": 7
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 32,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$0Jw7rje4kHAYwy2IOFnpW5$j6dcT18gUMh7T2gn+b7IaUteQKYV7VYsbevYB8DSPUM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "timothypatterson",
+            "first_name": "Brittney",
+            "last_name": "Carter",
+            "email": "kimberly12@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 8,
+            "team": 8
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 33,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$sVGl6titAsjD6itkhrcooz$pjOiMTrVIFwiPXXcJVVsrUzR5W8ogCNYRf9Sy3+l1SM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "jennifermoore",
+            "first_name": "Ashlee",
+            "last_name": "Edwards",
+            "email": "qrodriguez@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 1,
+            "team": 1
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 34,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$9gMj8TrQSvhfMyLDIfTUk2$IqZNyK8KTM+APRpAv8yecIOjcnkb3EKJ2dx/pS7tQ3A=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "hallsarah",
+            "first_name": "Amy",
+            "last_name": "Thompson",
+            "email": "wmorales@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 2,
+            "team": 2
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 35,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$xG1n1M68lTjQ7VX5RhShVp$Ox0qc7c4N/eLkrq7rfOboHAFYINLx//OfiMnjvXo2yw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "randyweber",
+            "first_name": "Brenda",
+            "last_name": "Patterson",
+            "email": "victoria47@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 3,
+            "team": 3
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 36,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$Ta8XREakNpVfNNpv2Ygclf$/4bumVZFCGiilp6MufatC4XE950nxvDkckZOg6uFc9U=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "rebeccabrady",
+            "first_name": "Allen",
+            "last_name": "Christensen",
+            "email": "christopher35@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 4,
+            "team": 4
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 37,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$OAxETXXCOEkzh9UaXwZvbu$7R0s8dhYgwHaJ6CJ8ZtailwiYbJIZLzk6iH4oiyJhoc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "tlawson",
+            "first_name": "Randy",
+            "last_name": "Harris",
+            "email": "jennifer89@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 5,
+            "team": 5
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 38,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$IBHqxmfnFw58KNP39uNyej$27SDX+3mkRK4cNHYgHAQ54IserfnrpI1kJ8JN8gMiAM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "pughandrew",
+            "first_name": "Michael",
+            "last_name": "Jackson",
+            "email": "marcusrobinson@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 6,
+            "team": 6
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 39,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$K4dPZmrFP32q6pThs5RE33$tlNGFqGAeVZ6Eq6d4ZRFmIBxfgLVGNIzrR5Z52WAHgo=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "kimberly31",
+            "first_name": "John",
+            "last_name": "Cruz",
+            "email": "renee33@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 7,
+            "team": 7
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 40,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$kfP3jdEmltsw8whgyecZRK$AS9lEID04n6IZh88fyQFerfGZRtbxMn5TG0ZfueLOgY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "michael80",
+            "first_name": "Andrew",
+            "last_name": "Miles",
+            "email": "michaelwyatt@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 8,
+            "team": 8
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 41,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$9Mv4027eIayykGf2mi8glj$MMA067BH/DckRF9jeUj1hox6H6jTirXF/dM5Dh6n2hc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "ghenry",
+            "first_name": "Andrea",
+            "last_name": "Brown",
+            "email": "erin08@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 1,
+            "team": 1
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 42,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$tENM97Yr4Zj4etcRoBHC8M$t6kbJxBmnWo9zBU47j0glT9cyPmqvF3Qed3zfaop35s=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "deannarocha",
+            "first_name": "Barbara",
+            "last_name": "Dodson",
+            "email": "elogan@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 2,
+            "team": 2
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 43,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$3GHkn8HnKVUhw6CGfeoDWU$Ng0UvXyYsJXUGwXjJJeAHBFl+O1LGIqHF62wpzpC+MM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "xmiller",
+            "first_name": "Anthony",
+            "last_name": "Clayton",
+            "email": "stevensanders@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 3,
+            "team": 3
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 44,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$yZMHpbopT1hsoge8Lyk71W$RTwRvTf7x9/DfBkD2/wuAUqbR2mhqyoMPLZPBF9IFDM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "sydneystafford",
+            "first_name": "Megan",
+            "last_name": "Dean",
+            "email": "colonmegan@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 4,
+            "team": 4
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 45,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$YL6xndK8Y53ps6W1DBYd7I$vhUl1GBPJ4vxunBh0EL3N0nTdk5CNu38l5x6C0yTmP8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "michellewhite",
+            "first_name": "Brad",
+            "last_name": "Carey",
+            "email": "benjaminsweeney@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 5,
+            "team": 5
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 46,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$cCh2hsCsxnvi9EQ0cJVVeN$O9kilBLgkDunim5YGtl4+FN/egoX85U4J3vSY/YzRZY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "stevengonzalez",
+            "first_name": "Nicholas",
+            "last_name": "Barker",
+            "email": "tinarodriguez@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 6,
+            "team": 6
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 47,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$osdPf4szWTIvzvjcX2su0w$OGQuTPqX5s8oamnlfRMH0VyjTDgRdeoXZfNdxxMxrek=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "nicholas87",
+            "first_name": "Melissa",
+            "last_name": "Saunders",
+            "email": "mitchellmichael@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 7,
+            "team": 7
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 48,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$PagKdCAJuIQ7mSgE3uRgYB$WotdCM4GI4NqySWpBmiGhTjFNrWngRFt+Y6M3LFthu8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "ljackson",
+            "first_name": "John",
+            "last_name": "Wang",
+            "email": "rebecca99@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 8,
+            "team": 8
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 49,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$ZModMAQp5u2VHRpckZLFsH$vk1G+UfNtIN4ZiquWHU+x2T253Wjecn/WCYFzPQfXXg=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "hufftammy",
+            "first_name": "Jonathan",
+            "last_name": "Beasley",
+            "email": "matasonya@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 1,
+            "team": 1
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 50,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$E5HHtZUjiVVnKdtODDSeXN$Rql5MQpnpbsf8OqW/IRh42yH2b7urbTSfmNAYij2+Nc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "ortizbrittany",
+            "first_name": "Evelyn",
+            "last_name": "Foster",
+            "email": "toddmonroe@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 2,
+            "team": 2
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 51,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$B7sKhCFyXoHBJyghS8yGZy$Pw/CyyoIIa/aa/f34Vk8il3i4DIxdLDm+yqVt9ZsGyg=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "librooke",
+            "first_name": "Gabrielle",
+            "last_name": "Hall",
+            "email": "joshua09@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 3,
+            "team": 3
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 52,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$Iy1pEpRkfvxdUfPcQgmGa3$nGuYYNW9p1u2Bp45w3uJKKEFzRlZYpM40o6Jujv8OiY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "pvelasquez",
+            "first_name": "Sherry",
+            "last_name": "Mueller",
+            "email": "kevin06@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 4,
+            "team": 4
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 53,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$JXM2uA0MFiPNJbqu6dNhVB$ZGYjh+cTERgqaazfNnu4aidyX5l060m7CY97Pojvg4A=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "amymoran",
+            "first_name": "Melissa",
+            "last_name": "Miller",
+            "email": "ulopez@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 5,
+            "team": 5
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 54,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$sGbaARJaE9wuNhdJkMtmT9$lTI97uCGRjZbO5O1dIkdhoJHyoSLYHwIVJQAXocgj0g=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "ustone",
+            "first_name": "Nancy",
+            "last_name": "Roy",
+            "email": "jade92@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 6,
+            "team": 6
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 55,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$UTkpd4s6JJbzqw0QloUtil$FQCU5g6Pz40fZgS2szpLgUaP1xS69+o0DpAqMBoQKX4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "gregorystephanie",
+            "first_name": "Tammy",
+            "last_name": "Gillespie",
+            "email": "troy73@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 7,
+            "team": 7
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 56,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$nSXpCxJMgXuzlIKRQ4yrZX$BNNTWfkIZGYyAZfoKlwpzaZ+b/fRn0phjsu5Qcjz/os=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "wjohnson",
+            "first_name": "William",
+            "last_name": "Wilson",
+            "email": "esmith@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 8,
+            "team": 8
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 57,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$W0iIgrs1VceuMO9e9f8Ugc$kvg2lnJCfvxgxMbwTSwBVVtYi0x2377oFFzSgwenApU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "ifuller",
+            "first_name": "Nancy",
+            "last_name": "Wallace",
+            "email": "josborn@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 1,
+            "team": 1
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 58,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$o0XMuyzsJ7ExoiBWXUsSSC$kYWxzL81DzgHkjiu/ZmkzdWMkXw/TkM8cycJRifPFTk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "akaufman",
+            "first_name": "Phillip",
+            "last_name": "Thompson",
+            "email": "washingtonkristen@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 2,
+            "team": 2
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 59,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$uPp2syWbqESZySPhTMq9xW$aav5VAW3RMC7UjqNa1eNcjAEDmNPrZY8ysmDt5PhyF0=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "william99",
+            "first_name": "Raymond",
+            "last_name": "Hall",
+            "email": "jennifer02@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 3,
+            "team": 3
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 60,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$OOx4Fo7ag9osyr9j047A4S$KXDK2ShKVh3vh0nu9VgSbL2FpI4i4D1N/N1G9qt4kGQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "gutierrezjeremy",
+            "first_name": "Tyler",
+            "last_name": "Garcia",
+            "email": "clarkjames@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 4,
+            "team": 4
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 61,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$AEEkozOSvsCr9OUl20s1aj$MKXOWyjn9BlNl2Lm5zHPomW6puvYkWU4nQEnTikuwoc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "calhounnatasha",
+            "first_name": "Michelle",
+            "last_name": "Wilkinson",
+            "email": "amanda22@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 5,
+            "team": 5
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 62,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$3cYWrAM40ycZwNzfLrS8uR$54T8pT9GEtoBYsH6Dv+I7Mj0RWBzQiRv4gQZa1T+zrc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "ewilkins",
+            "first_name": "Connie",
+            "last_name": "Leon",
+            "email": "walshkyle@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 6,
+            "team": 6
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 63,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$zJtyNybGPX66qP7nreYQXU$W1vGnlAwYtlvUtnawMWukvcJ2wFCXzklKZIh1XhJiYE=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "donald85",
+            "first_name": "Lacey",
+            "last_name": "Lawrence",
+            "email": "hboyd@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 7,
+            "team": 7
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 64,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$SOctXYremVeidopMBzji5z$9RCQac8Tx5+or01vV2bJU3OVoa4A6Rmo1EpG+MIZGt4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "fbauer",
+            "first_name": "David",
+            "last_name": "Beltran",
+            "email": "monicaburton@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 8,
+            "team": 8
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 65,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$i4wdVMgHhaBSGycFGRKFnL$QXJ32WTPuGFNXdWwE+1umA4Wdy1YGgmvQV8o4DFyzZU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "tabithagonzalez",
+            "first_name": "Todd",
+            "last_name": "Bailey",
+            "email": "matthewryan@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 1,
+            "team": 1
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 66,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$yjt3FAl8b5Zr9GKqU24FNI$3IoKyHCGix8dl++tdA25NrXlmr4KuW3aZ9TH5GignY4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "danielle00",
+            "first_name": "Joseph",
+            "last_name": "Black",
+            "email": "tsnyder@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 2,
+            "team": 2
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 67,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$khH2BGFJ3uxbbtW0tJuTND$wZvCZerlfkD5RwTMkVA4+s3WBihCReZM88srD3KhLsw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "hobbsbrianna",
+            "first_name": "Tyler",
+            "last_name": "Valdez",
+            "email": "scottreilly@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 3,
+            "team": 3
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 68,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$x0nBPxzPEc9e0hx83RjuCu$Zy+H+d8/ujytttQCHY/t5DHFzEbwLtVKe4JUAOZgqqU=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "bryanmurray",
+            "first_name": "Christy",
+            "last_name": "Bates",
+            "email": "mcintyrekatrina@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 4,
+            "team": 4
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 69,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$kkjdANXX0FsEQoZinq3slx$CxMNWL0HhPVq5OUKjL4rYHxqEpnhvuXzvA7Ety3QvLk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "jenningskevin",
+            "first_name": "John",
+            "last_name": "Haley",
+            "email": "justin68@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 5,
+            "team": 5
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 70,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$e6awuUBAImW7SPuaz6Bm09$bhiyeQDBQHUt4pkW9DRjBoqSWuyw91W/QED6AzNPjBg=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "joseph02",
+            "first_name": "Donna",
+            "last_name": "Jensen",
+            "email": "stevensadam@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 6,
+            "team": 6
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 71,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$l2cbWI2OswgEjYbE84FlwQ$mNdk7v8XfKSuDo4OxYjcmL6rVYBU7LLrXjCnr7cvH2M=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "brian20",
+            "first_name": "Jason",
+            "last_name": "Andrade",
+            "email": "michaelyoung@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 7,
+            "team": 7
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 72,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$nmao5dhNGHh7pOJFvszZhx$0UXESH5RHsFfjwmzrXqsUSWyjpK18p1AyO/5NZwAvbk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "maldonadojessica",
+            "first_name": "Erica",
+            "last_name": "Villarreal",
+            "email": "michelle51@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 8,
+            "team": 8
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 73,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$Jt12pJqbgK0mROiQ7weaC9$yjRn2NUtUB06xA3588/KAfJUxT0kFn9v2jtQlsT+bjA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "jennifer59",
+            "first_name": "Samantha",
+            "last_name": "Martinez",
+            "email": "reneelopez@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 1,
+            "team": 1
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 74,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$hGaYJyf4ej0DnLoSeGEBbK$PLnFOb0jEpD6AW7QwQhjx0SKNLM0KJfLZcpB+YYAyPY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "lwhite",
+            "first_name": "Brenda",
+            "last_name": "Daugherty",
+            "email": "melissa07@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 2,
+            "team": 2
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 75,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$FXtXb4bbI76M8zSe8FyQuU$byN9+UtqSctWZy+bSoEZaDTOIlrGV4uWebzjKI2Varo=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "nflores",
+            "first_name": "Cynthia",
+            "last_name": "Weaver",
+            "email": "andrea27@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 3,
+            "team": 3
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 76,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$rTCdoWju130jBsS69HpfWq$r6F26f42IQ9I/NaEfb66bD+FUH2h/+iakyryyxIUu88=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "clarkbobby",
+            "first_name": "Pamela",
+            "last_name": "Smith",
+            "email": "robinvazquez@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 4,
+            "team": 4
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 77,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$06tj1P7Cv4tQiXAmX5Mjve$+nBX0UukhWrz4frUm6u3sEQ1BpZrWH10MxYz5cWQF6s=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "cwilson",
+            "first_name": "Jose",
+            "last_name": "Martinez",
+            "email": "urhodes@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 5,
+            "team": 5
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 78,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$gSTaVzIfIWoYohNbotaVhA$PYPMCnX0oFwivKq45ZK8aqkLejpi0w8ADWjhJxVFpzc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "lopezregina",
+            "first_name": "Laura",
+            "last_name": "Nixon",
+            "email": "ebenton@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 6,
+            "team": 6
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 79,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$lI9y7gvfCn95S6BKX6oqcP$op0mIiEuECfR8dJJHbvL49rLnaDgxA+dRXvXg/quhZM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "vincent64",
+            "first_name": "Amy",
+            "last_name": "Roman",
+            "email": "moraeddie@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 7,
+            "team": 7
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 80,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$T3iGcOV5B0OjBHrtpdVcP5$Fwl4H5dqnPpNYJzDygU9mSN6mFvRVvU2Ys5SI8FhzO0=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "stacey85",
+            "first_name": "Joseph",
+            "last_name": "Becker",
+            "email": "eclark@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 8,
+            "team": 8
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 81,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$h2ZDnLV4NwzMQrSmMCRSuA$QANv21f7vUk91OhPGuNXTuBCRABxNLheXZiJiosL9tg=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "gregoryross",
+            "first_name": "Felicia",
+            "last_name": "Reeves",
+            "email": "joshuamcdonald@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 1,
+            "team": 1
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 82,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$RpT7lLgOsgdijRtN3yFByL$cV8HPtRmsm1liI2vh2KqBuyKUh6IFkI0rZSUmMYMI+8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "hurstcarla",
+            "first_name": "Rebecca",
+            "last_name": "Rose",
+            "email": "nathanielmcgee@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 2,
+            "team": 2
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 83,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$dO8F4cd3dDxb2vY1BVazKt$Dtpb+/HSO9KhcY+flMIynr1Dw6HbU3rWE6a8W/QpQnI=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "nschmidt",
+            "first_name": "Samantha",
+            "last_name": "Baker",
+            "email": "brittanylong@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 3,
+            "team": 3
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 84,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$2JKXFfyioAQcWJAOPrrfre$SbwoC1TlG6ukbkr2sBmTH2Eos4zsLHBh64+bidaKC1k=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "kim45",
+            "first_name": "Gina",
+            "last_name": "Bennett",
+            "email": "starkjennifer@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 4,
+            "team": 4
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 85,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$KfdLEfPbAA1NPB1lG8ymam$xwHibyMmztn459QjVZ5XfOWaSDStIG21Fds0oqElCtA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "jerrybowers",
+            "first_name": "Summer",
+            "last_name": "Fuller",
+            "email": "candacelove@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 5,
+            "team": 5
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 86,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$GcAsAScVgjxjR5pck50Jrj$HADxGi0L9eiuXjwH7ookoeZbfLWp1JY7PNdGkwKshfc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "stewartjon",
+            "first_name": "Brian",
+            "last_name": "Simpson",
+            "email": "hopkinsbrian@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 6,
+            "team": 6
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 87,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$rghBnQNG2fe3QwCTonYuJO$IOfFeuyXt6nrHqbQTUq54nLQxqcn8rmEdxs7Zl0kojY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "erik16",
+            "first_name": "Denise",
+            "last_name": "Haley",
+            "email": "millersusan@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 7,
+            "team": 7
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 88,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$B3oN38Wz8PKlo3K1GXblvd$8XDCR59dNMIAsrxGaohF0KS2spRXA+sYXNwY8G4B+dY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "ariasjacob",
+            "first_name": "Dana",
+            "last_name": "Esparza",
+            "email": "brooksdustin@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 8,
+            "team": 8
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 89,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$izZrIkdOKnI18QTT7uJFW3$1+r8Fd0u6PIIDh5G69Bzq3uDmXN9+SwPfr7LwnQ095w=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "davisbrian",
+            "first_name": "Samantha",
+            "last_name": "Gomez",
+            "email": "brian73@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 1,
+            "team": 1
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 90,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$YAdB9y8ordL7KXPkeStVi4$FKwuYO+UpqyjKj7kyjoY4b0nc29bWPvBe2MLvd4qDBM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "erica04",
+            "first_name": "James",
+            "last_name": "Guerrero",
+            "email": "rmendoza@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 2,
+            "team": 2
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 91,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$g2VSeoUIZ4G3sIENn8Pxv9$U5uXlMqRgWWzSvdExmC+zcJ1TI6dBUoFScW5P0q59ME=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "andrew23",
+            "first_name": "Ashley",
+            "last_name": "Cooper",
+            "email": "clarkmaria@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 3,
+            "team": 3
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 92,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$j2VeDzfqYc64Onr6AtMzL6$hWpXEOiyeHdGT0Ppw1yYL6aMxU3Kl3VIfl2ZsOErRpY=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "kristinfields",
+            "first_name": "Eric",
+            "last_name": "Bruce",
+            "email": "maysteven@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 4,
+            "team": 4
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 93,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$O0sb16A8lYnNccQhYObNER$5wonHtX//3GdduvSaXas3wVw/J6CYm9lauA8WsPJjIA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "derekcaldwell",
+            "first_name": "Ashley",
+            "last_name": "Pruitt",
+            "email": "hayesjesus@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 5,
+            "team": 5
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 94,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$64zpZVNjlmKFJviKKwskrt$bxzbNpZvCTw8OoAmnHLDmre9bf1WqxETPE0eaPFdT48=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "williamsheather",
+            "first_name": "Cassandra",
+            "last_name": "Bell",
+            "email": "barrgeoffrey@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 6,
+            "team": 6
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 95,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$PmtyouHQk77aQM6A2HNtK5$T1xmekqMqWfjDuC3XUBIhALWmMC3+mvERXx4WgKitR8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "katherine89",
+            "first_name": "Crystal",
+            "last_name": "Rivera",
+            "email": "briancastaneda@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 7,
+            "team": 7
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 96,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$Al0PPvsQaLbuDnr6imSt07$0i65F/wMkOhpnARy4EXT/EEBbFo6f+jFexLtje+ljP8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "nbryan",
+            "first_name": "Curtis",
+            "last_name": "Jackson",
+            "email": "meghan51@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 8,
+            "team": 8
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 97,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$YiKFKAfgVrW5JrR3bGTDN8$TrYYZkQCZd1j27C2/RPYl1giFfnkVrqX5L+JFoTkPJA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "sanchezjeanette",
+            "first_name": "Jennifer",
+            "last_name": "Johnson",
+            "email": "andrew50@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 1,
+            "team": 1
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 98,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$rcOtDhO9E7suXboduLoPJq$igLvHniFaYDlZGR3vlhnxRMVY7/TBjnP+ublm4Ro980=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "jamiewilson",
+            "first_name": "Amanda",
+            "last_name": "Foster",
+            "email": "blara@example.net",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 2,
+            "team": 2
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 99,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$OfdPbgRqvTLHGuWb1tR4iS$bGAip42TCr1esqhk2aJhNgSCWdJ8Wbb0S3KytELVn08=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "glewis",
+            "first_name": "Kristina",
+            "last_name": "Yang",
+            "email": "emilyhodge@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 3,
+            "team": 3
+        }
+    },
+    {
+        "model": "manager.worker",
+        "pk": 100,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$6yTdwcqX34KuQ5H2vc6294$As+tS5DUmJfqJbpui+iZLXyuDJ0lmKJBrbA7rJoHVoA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "caleb53",
+            "first_name": "David",
+            "last_name": "Lamb",
+            "email": "kennethowens@example.org",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-01-01T00:00:00Z",
+            "position": 4,
+            "team": 4
+        }
+    },
+    {
+        "model": "manager.projecttype",
+        "pk": 1,
+        "fields": {
+            "name": "Web Development"
+        }
+    },
+    {
+        "model": "manager.projecttype",
+        "pk": 2,
+        "fields": {
+            "name": "Mobile Development"
+        }
+    },
+    {
+        "model": "manager.projecttype",
+        "pk": 3,
+        "fields": {
+            "name": "Data Analysis"
+        }
+    },
+    {
+        "model": "manager.projecttype",
+        "pk": 4,
+        "fields": {
+            "name": "Cloud Computing"
+        }
+    },
+    {
+        "model": "manager.project",
+        "pk": 1,
+        "fields": {
+            "name": "E-commerce Platform Development",
+            "type": 1,
+            "description": "Description for E-commerce Platform Development",
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.project",
+        "pk": 2,
+        "fields": {
+            "name": "Mobile Banking App",
+            "type": 2,
+            "description": "Description for Mobile Banking App",
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.project",
+        "pk": 3,
+        "fields": {
+            "name": "Data Analytics Dashboard",
+            "type": 3,
+            "description": "Description for Data Analytics Dashboard",
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.project",
+        "pk": 4,
+        "fields": {
+            "name": "Cloud Migration Strategy",
+            "type": 4,
+            "description": "Description for Cloud Migration Strategy",
+            "teams": [
+                8,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.project",
+        "pk": 5,
+        "fields": {
+            "name": "AI-Powered Chatbot",
+            "type": 1,
+            "description": "Description for AI-Powered Chatbot",
+            "teams": [
+                8,
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.project",
+        "pk": 6,
+        "fields": {
+            "name": "Social Media Integration",
+            "type": 2,
+            "description": "Description for Social Media Integration",
+            "teams": [
+                8,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "manager.project",
+        "pk": 7,
+        "fields": {
+            "name": "IoT Device Management",
+            "type": 3,
+            "description": "Description for IoT Device Management",
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "manager.project",
+        "pk": 8,
+        "fields": {
+            "name": "Blockchain Payment System",
+            "type": 4,
+            "description": "Description for Blockchain Payment System",
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 1,
+        "fields": {
+            "name": "Task 1: Project line thank general.",
+            "description": "Description for Task 1: Phone idea individual. Hit no also final home worker exactly.",
+            "deadline": "2025-03-22",
+            "is_completed": true,
+            "priority": "Low",
+            "task_type": 1,
+            "assignees": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "project": 1,
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 2,
+        "fields": {
+            "name": "Task 2: As detail affect student pay billion.",
+            "description": "Description for Task 2: Build trouble sing even play race. Thing turn husband compare ok fact once. Simply detail democratic bar sing traditional model.",
+            "deadline": "2025-05-10",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 2,
+            "assignees": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "project": 2,
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 3,
+        "fields": {
+            "name": "Task 3: Draw shake year member.",
+            "description": "Description for Task 3: Ever peace behind hot and note. Success perform although yeah.",
+            "deadline": "2025-05-17",
+            "is_completed": true,
+            "priority": "Low",
+            "task_type": 3,
+            "assignees": [
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "project": 3,
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 4,
+        "fields": {
+            "name": "Task 4: Protect culture born office light meet feel cut.",
+            "description": "Description for Task 4: Ok poor police say look main economy. Same class word discover than.",
+            "deadline": "2025-05-11",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 4,
+            "assignees": [
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "project": 4,
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 5,
+        "fields": {
+            "name": "Task 5: Full she garden level certainly politics.",
+            "description": "Description for Task 5: Old attorney wonder yet yard ball. Within kid west. Skin growth gun.",
+            "deadline": "2025-02-22",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 5,
+            "assignees": [
+                6,
+                7,
+                8,
+                9,
+                10
+            ],
+            "project": 5,
+            "teams": [
+                8,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 6,
+        "fields": {
+            "name": "Task 6: Condition her focus resource surface democratic.",
+            "description": "Description for Task 6: Sport pay likely area feeling issue part. Sport PM until.",
+            "deadline": "2025-04-14",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 6,
+            "assignees": [
+                7,
+                8,
+                9,
+                10,
+                11
+            ],
+            "project": 6,
+            "teams": [
+                8,
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 7,
+        "fields": {
+            "name": "Task 7: Debate forget evidence music keep maybe.",
+            "description": "Description for Task 7: Continue morning change for during. Figure degree feel line know. Box movie above increase laugh.",
+            "deadline": "2025-03-31",
+            "is_completed": true,
+            "priority": "High",
+            "task_type": 7,
+            "assignees": [
+                8,
+                9,
+                10,
+                11,
+                12
+            ],
+            "project": 7,
+            "teams": [
+                8,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 8,
+        "fields": {
+            "name": "Task 8: Air finally relate sport.",
+            "description": "Description for Task 8: Main sing suddenly. Risk within trial lay several why smile.",
+            "deadline": "2025-02-21",
+            "is_completed": true,
+            "priority": "Low",
+            "task_type": 8,
+            "assignees": [
+                9,
+                10,
+                11,
+                12,
+                13
+            ],
+            "project": 8,
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 9,
+        "fields": {
+            "name": "Task 9: Every common baby development.",
+            "description": "Description for Task 9: Might bag figure movement month represent.",
+            "deadline": "2025-05-05",
+            "is_completed": true,
+            "priority": "Low",
+            "task_type": 1,
+            "assignees": [
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "project": 1,
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 10,
+        "fields": {
+            "name": "Task 10: Series tax discuss anything.",
+            "description": "Description for Task 10: Material painting none draw pass down hit. Down place lot clear phone where television. Interesting try view visit.",
+            "deadline": "2025-04-17",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 2,
+            "assignees": [
+                11,
+                12,
+                13,
+                14,
+                15
+            ],
+            "project": 2,
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 11,
+        "fields": {
+            "name": "Task 11: American avoid million also still lay.",
+            "description": "Description for Task 11: Blue lead produce stay. Less bag sit billion much professional. Face surface few development ability throw.",
+            "deadline": "2025-05-15",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 3,
+            "assignees": [
+                12,
+                13,
+                14,
+                15,
+                16
+            ],
+            "project": 3,
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 12,
+        "fields": {
+            "name": "Task 12: Decide push themselves short.",
+            "description": "Description for Task 12: Safe put its few structure company weight. Few front far number name. Source part laugh particularly throughout. Adult clear feeling former sport.",
+            "deadline": "2025-04-10",
+            "is_completed": true,
+            "priority": "Low",
+            "task_type": 4,
+            "assignees": [
+                13,
+                14,
+                15,
+                16,
+                17
+            ],
+            "project": 4,
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 13,
+        "fields": {
+            "name": "Task 13: Wish would huge occur.",
+            "description": "Description for Task 13: Fear professor son. Size place note suggest.",
+            "deadline": "2025-03-29",
+            "is_completed": true,
+            "priority": "Low",
+            "task_type": 5,
+            "assignees": [
+                14,
+                15,
+                16,
+                17,
+                18
+            ],
+            "project": 5,
+            "teams": [
+                8,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 14,
+        "fields": {
+            "name": "Task 14: Film student politics tough fast claim series.",
+            "description": "Description for Task 14: Two energy lot support. Practice total official into possible race charge.",
+            "deadline": "2025-03-09",
+            "is_completed": true,
+            "priority": "High",
+            "task_type": 6,
+            "assignees": [
+                15,
+                16,
+                17,
+                18,
+                19
+            ],
+            "project": 6,
+            "teams": [
+                8,
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 15,
+        "fields": {
+            "name": "Task 15: Could seat news view energy.",
+            "description": "Description for Task 15: War card body the story we wrong. Past scene six country Republican reality. Economic home collection health choice health. Value front sell person career offer.",
+            "deadline": "2025-05-17",
+            "is_completed": true,
+            "priority": "Low",
+            "task_type": 7,
+            "assignees": [
+                16,
+                17,
+                18,
+                19,
+                20
+            ],
+            "project": 7,
+            "teams": [
+                8,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 16,
+        "fields": {
+            "name": "Task 16: Give campaign three consider each decision enough.",
+            "description": "Description for Task 16: Process or game forget strong interest. Move each prevent property speech painting born.",
+            "deadline": "2025-03-02",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 8,
+            "assignees": [
+                17,
+                18,
+                19,
+                20,
+                21
+            ],
+            "project": 8,
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 17,
+        "fields": {
+            "name": "Task 17: Want always deal save economy relationship.",
+            "description": "Description for Task 17: Drug air training across question significant poor. Current board behind market.",
+            "deadline": "2025-04-01",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 1,
+            "assignees": [
+                18,
+                19,
+                20,
+                21,
+                22
+            ],
+            "project": 1,
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 18,
+        "fields": {
+            "name": "Task 18: Carry around choice drug.",
+            "description": "Description for Task 18: Woman art tax letter agency him surface. Final and foot start team pay.",
+            "deadline": "2025-04-01",
+            "is_completed": true,
+            "priority": "High",
+            "task_type": 2,
+            "assignees": [
+                19,
+                20,
+                21,
+                22,
+                23
+            ],
+            "project": 2,
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 19,
+        "fields": {
+            "name": "Task 19: Foot since third modern significant.",
+            "description": "Description for Task 19: Image base trip become pressure. Make level town within wall hospital hit available. Respond physical their present tax.",
+            "deadline": "2025-05-09",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 3,
+            "assignees": [
+                20,
+                21,
+                22,
+                23,
+                24
+            ],
+            "project": 3,
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 20,
+        "fields": {
+            "name": "Task 20: Make at college friend book effect.",
+            "description": "Description for Task 20: Pretty end both. Network price short various one.",
+            "deadline": "2025-04-12",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 4,
+            "assignees": [
+                21,
+                22,
+                23,
+                24,
+                25
+            ],
+            "project": 4,
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 21,
+        "fields": {
+            "name": "Task 21: Represent little century news despite image.",
+            "description": "Description for Task 21: Too force kid word anything there. Staff father field rule option. Represent sport these field.",
+            "deadline": "2025-05-14",
+            "is_completed": true,
+            "priority": "High",
+            "task_type": 5,
+            "assignees": [
+                22,
+                23,
+                24,
+                25,
+                26
+            ],
+            "project": 5,
+            "teams": [
+                8,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 22,
+        "fields": {
+            "name": "Task 22: Have page effect too off nothing cell well.",
+            "description": "Description for Task 22: Glass house according individual later oil. Success major international performance recently notice. Child win little school town summer their.",
+            "deadline": "2025-04-18",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 6,
+            "assignees": [
+                23,
+                24,
+                25,
+                26,
+                27
+            ],
+            "project": 6,
+            "teams": [
+                8,
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 23,
+        "fields": {
+            "name": "Task 23: Capital main play part.",
+            "description": "Description for Task 23: With ever movement sea. Morning kitchen certainly very. Culture community alone sort charge character claim.",
+            "deadline": "2025-04-20",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 7,
+            "assignees": [
+                24,
+                25,
+                26,
+                27,
+                28
+            ],
+            "project": 7,
+            "teams": [
+                8,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 24,
+        "fields": {
+            "name": "Task 24: Pattern occur into skin capital turn.",
+            "description": "Description for Task 24: Financial best everyone medical. Future marriage conference sister. Level son effort foreign.",
+            "deadline": "2025-04-11",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 8,
+            "assignees": [
+                25,
+                26,
+                27,
+                28,
+                29
+            ],
+            "project": 8,
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 25,
+        "fields": {
+            "name": "Task 25: Hard citizen tough common eight exactly factor.",
+            "description": "Description for Task 25: Heavy condition then show. Mean class too she city people. Law look and nice ten their of.",
+            "deadline": "2025-04-17",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 1,
+            "assignees": [
+                26,
+                27,
+                28,
+                29,
+                30
+            ],
+            "project": 1,
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 26,
+        "fields": {
+            "name": "Task 26: Possible ask party vote commercial college heavy.",
+            "description": "Description for Task 26: Still audience me increase return recently. Radio sense record program table new turn food. Successful fall although baby.",
+            "deadline": "2025-02-27",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 2,
+            "assignees": [
+                27,
+                28,
+                29,
+                30,
+                31
+            ],
+            "project": 2,
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 27,
+        "fields": {
+            "name": "Task 27: Second administration choose know political tonight other.",
+            "description": "Description for Task 27: Involve cost plan treatment every prevent. Despite bar buy record tend floor.",
+            "deadline": "2025-04-10",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 3,
+            "assignees": [
+                32,
+                28,
+                29,
+                30,
+                31
+            ],
+            "project": 3,
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 28,
+        "fields": {
+            "name": "Task 28: Lot easy debate treatment single least situation.",
+            "description": "Description for Task 28: When teacher doctor activity send rich job. Material central away.",
+            "deadline": "2025-05-06",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 4,
+            "assignees": [
+                32,
+                33,
+                29,
+                30,
+                31
+            ],
+            "project": 4,
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 29,
+        "fields": {
+            "name": "Task 29: Space thousand film quite political.",
+            "description": "Description for Task 29: Fill rather close audience alone figure avoid. Southern eight save long appear sing keep. Another why amount century.",
+            "deadline": "2025-03-03",
+            "is_completed": true,
+            "priority": "Low",
+            "task_type": 5,
+            "assignees": [
+                32,
+                33,
+                34,
+                30,
+                31
+            ],
+            "project": 5,
+            "teams": [
+                8,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 30,
+        "fields": {
+            "name": "Task 30: House agree collection lose food offer.",
+            "description": "Description for Task 30: Whom address consumer thank front board seek. Current represent positive analysis work unit. Officer strategy purpose month.",
+            "deadline": "2025-03-11",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 6,
+            "assignees": [
+                32,
+                33,
+                34,
+                35,
+                31
+            ],
+            "project": 6,
+            "teams": [
+                8,
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 31,
+        "fields": {
+            "name": "Task 31: The option employee important off believe sign.",
+            "description": "Description for Task 31: Reach according race leader nation. Wall take this such station. Address rest spend him card.",
+            "deadline": "2025-05-15",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 7,
+            "assignees": [
+                32,
+                33,
+                34,
+                35,
+                36
+            ],
+            "project": 7,
+            "teams": [
+                8,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 32,
+        "fields": {
+            "name": "Task 32: Fill single their actually.",
+            "description": "Description for Task 32: Democrat born public car amount often possible. Catch listen a experience federal carry. Center appear hope wait deep southern.",
+            "deadline": "2025-04-22",
+            "is_completed": true,
+            "priority": "Low",
+            "task_type": 8,
+            "assignees": [
+                33,
+                34,
+                35,
+                36,
+                37
+            ],
+            "project": 8,
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 33,
+        "fields": {
+            "name": "Task 33: Notice local fact though store toward where key.",
+            "description": "Description for Task 33: Only water current air fund relate low. Work level case beyond have road child food.",
+            "deadline": "2025-02-28",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 1,
+            "assignees": [
+                34,
+                35,
+                36,
+                37,
+                38
+            ],
+            "project": 1,
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 34,
+        "fields": {
+            "name": "Task 34: Material trade almost entire cell let behind.",
+            "description": "Description for Task 34: Clearly cut center final really their color important. One decision people hair whose enough prevent worry. More strong it side participant raise rule.",
+            "deadline": "2025-03-28",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 2,
+            "assignees": [
+                35,
+                36,
+                37,
+                38,
+                39
+            ],
+            "project": 2,
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 35,
+        "fields": {
+            "name": "Task 35: Provide anything race follow investment similar.",
+            "description": "Description for Task 35: Group hair once decide clear on environment. Such according term capital sea picture.",
+            "deadline": "2025-04-23",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 3,
+            "assignees": [
+                36,
+                37,
+                38,
+                39,
+                40
+            ],
+            "project": 3,
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 36,
+        "fields": {
+            "name": "Task 36: Daughter conference floor data money movement network.",
+            "description": "Description for Task 36: Big right clear voice hour board charge. Remember care environment.",
+            "deadline": "2025-04-07",
+            "is_completed": true,
+            "priority": "Low",
+            "task_type": 4,
+            "assignees": [
+                37,
+                38,
+                39,
+                40,
+                41
+            ],
+            "project": 4,
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 37,
+        "fields": {
+            "name": "Task 37: Sense sell probably reduce door sea course.",
+            "description": "Description for Task 37: Theory spring recently catch newspaper. Plant measure blue special citizen leave knowledge interest.",
+            "deadline": "2025-05-05",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 5,
+            "assignees": [
+                38,
+                39,
+                40,
+                41,
+                42
+            ],
+            "project": 5,
+            "teams": [
+                8,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 38,
+        "fields": {
+            "name": "Task 38: Able attention check may lawyer where.",
+            "description": "Description for Task 38: College situation happy rock couple appear television. Agree trouble arm start.",
+            "deadline": "2025-03-12",
+            "is_completed": true,
+            "priority": "High",
+            "task_type": 6,
+            "assignees": [
+                39,
+                40,
+                41,
+                42,
+                43
+            ],
+            "project": 6,
+            "teams": [
+                8,
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 39,
+        "fields": {
+            "name": "Task 39: Congress professional government return environmental.",
+            "description": "Description for Task 39: Summer trip consumer strong rock grow. Discuss really how.",
+            "deadline": "2025-03-26",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 7,
+            "assignees": [
+                40,
+                41,
+                42,
+                43,
+                44
+            ],
+            "project": 7,
+            "teams": [
+                8,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 40,
+        "fields": {
+            "name": "Task 40: Check hospital both admit.",
+            "description": "Description for Task 40: Century happy around or mission service three point. Single tax place small everybody sport bad get.",
+            "deadline": "2025-04-12",
+            "is_completed": true,
+            "priority": "High",
+            "task_type": 8,
+            "assignees": [
+                41,
+                42,
+                43,
+                44,
+                45
+            ],
+            "project": 8,
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 41,
+        "fields": {
+            "name": "Task 41: Make dark picture relationship yet.",
+            "description": "Description for Task 41: Fine example keep large watch. Officer mission because small. Particularly at point remember create.",
+            "deadline": "2025-03-17",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 1,
+            "assignees": [
+                42,
+                43,
+                44,
+                45,
+                46
+            ],
+            "project": 1,
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 42,
+        "fields": {
+            "name": "Task 42: Responsibility land degree certainly summer.",
+            "description": "Description for Task 42: Along smile technology model water. Treatment once late imagine remember artist.",
+            "deadline": "2025-05-01",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 2,
+            "assignees": [
+                43,
+                44,
+                45,
+                46,
+                47
+            ],
+            "project": 2,
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 43,
+        "fields": {
+            "name": "Task 43: Truth forget west size.",
+            "description": "Description for Task 43: Admit century film avoid. List modern stage role visit especially trouble.",
+            "deadline": "2025-04-05",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 3,
+            "assignees": [
+                44,
+                45,
+                46,
+                47,
+                48
+            ],
+            "project": 3,
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 44,
+        "fields": {
+            "name": "Task 44: Every measure throw cause economic father.",
+            "description": "Description for Task 44: Sport spend heavy choose lawyer moment. Rock none east direction contain. Hold loss about similar president research necessary church.",
+            "deadline": "2025-05-04",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 4,
+            "assignees": [
+                45,
+                46,
+                47,
+                48,
+                49
+            ],
+            "project": 4,
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 45,
+        "fields": {
+            "name": "Task 45: Maintain world hospital become.",
+            "description": "Description for Task 45: Financial mention water increase without author. Measure after experience market. Western modern increase suffer day live attack.",
+            "deadline": "2025-04-14",
+            "is_completed": true,
+            "priority": "High",
+            "task_type": 5,
+            "assignees": [
+                46,
+                47,
+                48,
+                49,
+                50
+            ],
+            "project": 5,
+            "teams": [
+                8,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 46,
+        "fields": {
+            "name": "Task 46: Speak human story stand growth order order.",
+            "description": "Description for Task 46: Pressure interest name tend also. Rock four even professor method same perhaps. Hundred task standard she law unit although. Course Democrat decision notice car would ahead.",
+            "deadline": "2025-04-29",
+            "is_completed": true,
+            "priority": "Urgent",
+            "task_type": 6,
+            "assignees": [
+                47,
+                48,
+                49,
+                50,
+                51
+            ],
+            "project": 6,
+            "teams": [
+                8,
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 47,
+        "fields": {
+            "name": "Task 47: Land wind beautiful life.",
+            "description": "Description for Task 47: Try show sister. Manage tree coach perform.",
+            "deadline": "2025-02-28",
+            "is_completed": true,
+            "priority": "High",
+            "task_type": 7,
+            "assignees": [
+                48,
+                49,
+                50,
+                51,
+                52
+            ],
+            "project": 7,
+            "teams": [
+                8,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 48,
+        "fields": {
+            "name": "Task 48: Again possible might none operation that stop national.",
+            "description": "Description for Task 48: Democratic central trip realize.",
+            "deadline": "2025-05-16",
+            "is_completed": true,
+            "priority": "Middle",
+            "task_type": 8,
+            "assignees": [
+                49,
+                50,
+                51,
+                52,
+                53
+            ],
+            "project": 8,
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 49,
+        "fields": {
+            "name": "Task 49: Simply upon describe fill food.",
+            "description": "Description for Task 49: Bill pick lawyer guy else. Blood myself out girl happen. Social professional movement nearly church light.",
+            "deadline": "2025-04-23",
+            "is_completed": true,
+            "priority": "Low",
+            "task_type": 1,
+            "assignees": [
+                50,
+                51,
+                52,
+                53,
+                54
+            ],
+            "project": 1,
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 50,
+        "fields": {
+            "name": "Task 50: Most which across owner change.",
+            "description": "Description for Task 50: Leader specific cut medical surface including. Sign career right person. Pull type indicate think admit real both teach. Its focus dog surface Mr add.",
+            "deadline": "2025-04-13",
+            "is_completed": true,
+            "priority": "Low",
+            "task_type": 2,
+            "assignees": [
+                51,
+                52,
+                53,
+                54,
+                55
+            ],
+            "project": 2,
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 51,
+        "fields": {
+            "name": "Task 51: Feeling black she as.",
+            "description": "Description for Task 51: Hundred just again accept power significant. Fire unit significant rather his draw create. Many name green way wrong seven.",
+            "deadline": "2025-02-23",
+            "is_completed": false,
+            "priority": "Middle",
+            "task_type": 3,
+            "assignees": [
+                52,
+                53,
+                54,
+                55,
+                56
+            ],
+            "project": 3,
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 52,
+        "fields": {
+            "name": "Task 52: Pretty time financial thought say generation administration.",
+            "description": "Description for Task 52: Reach big a seek door. Everybody call bit future head. Issue reduce data ten party begin.",
+            "deadline": "2025-05-04",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 4,
+            "assignees": [
+                53,
+                54,
+                55,
+                56,
+                57
+            ],
+            "project": 4,
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 53,
+        "fields": {
+            "name": "Task 53: Everything page visit significant professor from recently able.",
+            "description": "Description for Task 53: Still billion present remember four. Claim sure since toward talk southern heart imagine. Provide knowledge foot do.",
+            "deadline": "2025-04-18",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 5,
+            "assignees": [
+                54,
+                55,
+                56,
+                57,
+                58
+            ],
+            "project": 5,
+            "teams": [
+                8,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 54,
+        "fields": {
+            "name": "Task 54: Effect teach concern wife common subject.",
+            "description": "Description for Task 54: Individual her ground when as soldier state. Opportunity say technology than strong alone clear against. Field though order fly a few deep. Market simply support field scientist a side.",
+            "deadline": "2025-05-11",
+            "is_completed": false,
+            "priority": "Middle",
+            "task_type": 6,
+            "assignees": [
+                55,
+                56,
+                57,
+                58,
+                59
+            ],
+            "project": 6,
+            "teams": [
+                8,
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 55,
+        "fields": {
+            "name": "Task 55: Huge mind how late.",
+            "description": "Description for Task 55: Why after body lawyer training only participant score. Middle tough community card perform cover drop.",
+            "deadline": "2025-05-02",
+            "is_completed": false,
+            "priority": "Middle",
+            "task_type": 7,
+            "assignees": [
+                56,
+                57,
+                58,
+                59,
+                60
+            ],
+            "project": 7,
+            "teams": [
+                8,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 56,
+        "fields": {
+            "name": "Task 56: Build pass relationship office.",
+            "description": "Description for Task 56: Particular cold compare near. Hundred more family. Almost name indeed charge less.",
+            "deadline": "2025-03-20",
+            "is_completed": false,
+            "priority": "Low",
+            "task_type": 8,
+            "assignees": [
+                57,
+                58,
+                59,
+                60,
+                61
+            ],
+            "project": 8,
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 57,
+        "fields": {
+            "name": "Task 57: Society positive same would effect south.",
+            "description": "Description for Task 57: Hear compare today me doctor section international. Young drug participant deep race increase late.",
+            "deadline": "2025-05-04",
+            "is_completed": false,
+            "priority": "Middle",
+            "task_type": 1,
+            "assignees": [
+                58,
+                59,
+                60,
+                61,
+                62
+            ],
+            "project": 1,
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 58,
+        "fields": {
+            "name": "Task 58: Rule way couple end she.",
+            "description": "Description for Task 58: Particularly want attack board person. Raise environment sometimes.",
+            "deadline": "2025-05-08",
+            "is_completed": false,
+            "priority": "Low",
+            "task_type": 2,
+            "assignees": [
+                59,
+                60,
+                61,
+                62,
+                63
+            ],
+            "project": 2,
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 59,
+        "fields": {
+            "name": "Task 59: Be some program maintain address serious.",
+            "description": "Description for Task 59: Sure decade police recognize. Teacher before scene assume glass hundred dark forget.",
+            "deadline": "2025-04-28",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 3,
+            "assignees": [
+                64,
+                60,
+                61,
+                62,
+                63
+            ],
+            "project": 3,
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 60,
+        "fields": {
+            "name": "Task 60: Win participant cultural anything cut.",
+            "description": "Description for Task 60: Maybe teach figure company history trip. Including program sign decade against. Occur future already this.",
+            "deadline": "2025-04-22",
+            "is_completed": false,
+            "priority": "High",
+            "task_type": 4,
+            "assignees": [
+                64,
+                65,
+                61,
+                62,
+                63
+            ],
+            "project": 4,
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 61,
+        "fields": {
+            "name": "Task 61: Record garden boy however whatever.",
+            "description": "Description for Task 61: Short he example certainly represent remain compare budget. Nation month million adult more two. Manager clear young yard business mind. Would exist something simple attorney national.",
+            "deadline": "2025-04-13",
+            "is_completed": false,
+            "priority": "High",
+            "task_type": 5,
+            "assignees": [
+                64,
+                65,
+                66,
+                62,
+                63
+            ],
+            "project": 5,
+            "teams": [
+                8,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 62,
+        "fields": {
+            "name": "Task 62: Some a by.",
+            "description": "Description for Task 62: Professional rather phone sport. Threat brother remember class month business.",
+            "deadline": "2025-05-09",
+            "is_completed": false,
+            "priority": "Low",
+            "task_type": 6,
+            "assignees": [
+                64,
+                65,
+                66,
+                67,
+                63
+            ],
+            "project": 6,
+            "teams": [
+                8,
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 63,
+        "fields": {
+            "name": "Task 63: Unit run sit rather key season.",
+            "description": "Description for Task 63: Part watch sure project care word. Collection develop official respond plant. Paper any color as explain the accept.",
+            "deadline": "2025-04-13",
+            "is_completed": false,
+            "priority": "Low",
+            "task_type": 7,
+            "assignees": [
+                64,
+                65,
+                66,
+                67,
+                68
+            ],
+            "project": 7,
+            "teams": [
+                8,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 64,
+        "fields": {
+            "name": "Task 64: Short eat some alone here result.",
+            "description": "Description for Task 64: Board soldier stand law key up. Respond discuss wear guy unit teach since.",
+            "deadline": "2025-04-28",
+            "is_completed": false,
+            "priority": "Low",
+            "task_type": 8,
+            "assignees": [
+                65,
+                66,
+                67,
+                68,
+                69
+            ],
+            "project": 8,
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 65,
+        "fields": {
+            "name": "Task 65: Receive item something.",
+            "description": "Description for Task 65: Coach amount thus dark. Hour that newspaper involve various. Even actually face east class.",
+            "deadline": "2025-03-20",
+            "is_completed": false,
+            "priority": "High",
+            "task_type": 1,
+            "assignees": [
+                66,
+                67,
+                68,
+                69,
+                70
+            ],
+            "project": 1,
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 66,
+        "fields": {
+            "name": "Task 66: Sense time agency poor who.",
+            "description": "Description for Task 66: Account particularly century enter current reason cut consider. Not him finish. Always cultural whole stop according well.",
+            "deadline": "2025-05-02",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 2,
+            "assignees": [
+                67,
+                68,
+                69,
+                70,
+                71
+            ],
+            "project": 2,
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 67,
+        "fields": {
+            "name": "Task 67: Southern choice television data.",
+            "description": "Description for Task 67: Plant much central heart. Authority better leader color. Health effect bank force against drop add him.",
+            "deadline": "2025-05-11",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 3,
+            "assignees": [
+                68,
+                69,
+                70,
+                71,
+                72
+            ],
+            "project": 3,
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 68,
+        "fields": {
+            "name": "Task 68: Nearly value accept painting.",
+            "description": "Description for Task 68: Stay last though word happy. Whose possible section business. Without security under join.",
+            "deadline": "2025-05-04",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 4,
+            "assignees": [
+                69,
+                70,
+                71,
+                72,
+                73
+            ],
+            "project": 4,
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 69,
+        "fields": {
+            "name": "Task 69: Space mouth respond democratic minute fall.",
+            "description": "Description for Task 69: Trade soldier couple argue pass traditional. Both treatment test factor. Nor anyone my cut score. Nice may well suddenly by election might.",
+            "deadline": "2025-04-13",
+            "is_completed": false,
+            "priority": "High",
+            "task_type": 5,
+            "assignees": [
+                70,
+                71,
+                72,
+                73,
+                74
+            ],
+            "project": 5,
+            "teams": [
+                8,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 70,
+        "fields": {
+            "name": "Task 70: Character anything summer daughter both.",
+            "description": "Description for Task 70: Role wife another cup include decade. Item ten once.",
+            "deadline": "2025-04-08",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 6,
+            "assignees": [
+                71,
+                72,
+                73,
+                74,
+                75
+            ],
+            "project": 6,
+            "teams": [
+                8,
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 71,
+        "fields": {
+            "name": "Task 71: Treatment program war industry modern seek.",
+            "description": "Description for Task 71: Five soldier talk contain everybody month. Dinner federal these either a certainly.",
+            "deadline": "2025-03-30",
+            "is_completed": false,
+            "priority": "Middle",
+            "task_type": 7,
+            "assignees": [
+                72,
+                73,
+                74,
+                75,
+                76
+            ],
+            "project": 7,
+            "teams": [
+                8,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 72,
+        "fields": {
+            "name": "Task 72: Particularly tax rest.",
+            "description": "Description for Task 72: Box car for buy thing consumer. Heart president back quality staff technology. Scientist some person size successful care car.",
+            "deadline": "2025-03-08",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 8,
+            "assignees": [
+                73,
+                74,
+                75,
+                76,
+                77
+            ],
+            "project": 8,
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 73,
+        "fields": {
+            "name": "Task 73: Else style hair others fast a.",
+            "description": "Description for Task 73: Certain watch floor act former information decision. Former learn stage guy detail woman ever.",
+            "deadline": "2025-05-19",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 1,
+            "assignees": [
+                74,
+                75,
+                76,
+                77,
+                78
+            ],
+            "project": 1,
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 74,
+        "fields": {
+            "name": "Task 74: Our quite public what.",
+            "description": "Description for Task 74: Such paper girl raise fall author order on. Born tend Mrs size. Name management support probably government degree. Father something write guy resource.",
+            "deadline": "2025-04-08",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 2,
+            "assignees": [
+                75,
+                76,
+                77,
+                78,
+                79
+            ],
+            "project": 2,
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 75,
+        "fields": {
+            "name": "Task 75: Assume to citizen plant.",
+            "description": "Description for Task 75: War young help cut instead save. Industry issue high sign trial history.",
+            "deadline": "2025-02-20",
+            "is_completed": false,
+            "priority": "Low",
+            "task_type": 3,
+            "assignees": [
+                76,
+                77,
+                78,
+                79,
+                80
+            ],
+            "project": 3,
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 76,
+        "fields": {
+            "name": "Task 76: Budget board could project southern use.",
+            "description": "Description for Task 76: Bag price alone source feeling make total. Firm ever deal low security quite. Think no suffer country hard method some.",
+            "deadline": "2025-03-02",
+            "is_completed": false,
+            "priority": "Low",
+            "task_type": 4,
+            "assignees": [
+                77,
+                78,
+                79,
+                80,
+                81
+            ],
+            "project": 4,
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 77,
+        "fields": {
+            "name": "Task 77: City left have if.",
+            "description": "Description for Task 77: They long free. Investment well pass better expert. Job once because field wide among trial might.",
+            "deadline": "2025-04-03",
+            "is_completed": false,
+            "priority": "High",
+            "task_type": 5,
+            "assignees": [
+                78,
+                79,
+                80,
+                81,
+                82
+            ],
+            "project": 5,
+            "teams": [
+                8,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 78,
+        "fields": {
+            "name": "Task 78: Seek wear difference policy night.",
+            "description": "Description for Task 78: Minute provide wonder theory question. Reality picture analysis key cover development section others.",
+            "deadline": "2025-05-05",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 6,
+            "assignees": [
+                79,
+                80,
+                81,
+                82,
+                83
+            ],
+            "project": 6,
+            "teams": [
+                8,
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 79,
+        "fields": {
+            "name": "Task 79: Growth man manage example offer benefit possible.",
+            "description": "Description for Task 79: Right southern boy left two. South machine evidence southern do.",
+            "deadline": "2025-04-13",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 7,
+            "assignees": [
+                80,
+                81,
+                82,
+                83,
+                84
+            ],
+            "project": 7,
+            "teams": [
+                8,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 80,
+        "fields": {
+            "name": "Task 80: Activity point couple class.",
+            "description": "Description for Task 80: Crime popular stuff little ok difficult. Main arm before. Government miss more so if.",
+            "deadline": "2025-04-28",
+            "is_completed": false,
+            "priority": "Middle",
+            "task_type": 8,
+            "assignees": [
+                81,
+                82,
+                83,
+                84,
+                85
+            ],
+            "project": 8,
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 81,
+        "fields": {
+            "name": "Task 81: Operation skill interesting whether democratic anyone thought.",
+            "description": "Description for Task 81: Some eight look evening study according several. Land class plan environment special.",
+            "deadline": "2025-03-18",
+            "is_completed": false,
+            "priority": "Low",
+            "task_type": 1,
+            "assignees": [
+                82,
+                83,
+                84,
+                85,
+                86
+            ],
+            "project": 1,
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 82,
+        "fields": {
+            "name": "Task 82: Consumer kid production if fast level.",
+            "description": "Description for Task 82: Boy near draw support. Imagine experience push parent federal. Whether again material discussion worker.",
+            "deadline": "2025-03-23",
+            "is_completed": false,
+            "priority": "Middle",
+            "task_type": 2,
+            "assignees": [
+                83,
+                84,
+                85,
+                86,
+                87
+            ],
+            "project": 2,
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 83,
+        "fields": {
+            "name": "Task 83: Free heavy throughout almost.",
+            "description": "Description for Task 83: From page push paper catch. Side tend any recognize. Project send form.",
+            "deadline": "2025-05-14",
+            "is_completed": false,
+            "priority": "Middle",
+            "task_type": 3,
+            "assignees": [
+                84,
+                85,
+                86,
+                87,
+                88
+            ],
+            "project": 3,
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 84,
+        "fields": {
+            "name": "Task 84: Nor value leader war popular strategy.",
+            "description": "Description for Task 84: Artist standard have front area article. Look another base at all use charge.",
+            "deadline": "2025-04-14",
+            "is_completed": false,
+            "priority": "High",
+            "task_type": 4,
+            "assignees": [
+                85,
+                86,
+                87,
+                88,
+                89
+            ],
+            "project": 4,
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 85,
+        "fields": {
+            "name": "Task 85: Media center material mention hair yet.",
+            "description": "Description for Task 85: Cost small trouble start in art. Memory place floor between both economic decide.",
+            "deadline": "2025-03-21",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 5,
+            "assignees": [
+                86,
+                87,
+                88,
+                89,
+                90
+            ],
+            "project": 5,
+            "teams": [
+                8,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 86,
+        "fields": {
+            "name": "Task 86: Say enough fly wife sometimes.",
+            "description": "Description for Task 86: College phone almost six Congress. Actually from local Mrs you. Several similar should role focus.",
+            "deadline": "2025-04-26",
+            "is_completed": false,
+            "priority": "High",
+            "task_type": 6,
+            "assignees": [
+                87,
+                88,
+                89,
+                90,
+                91
+            ],
+            "project": 6,
+            "teams": [
+                8,
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 87,
+        "fields": {
+            "name": "Task 87: Early pull read education.",
+            "description": "Description for Task 87: Special deep feeling child imagine their heavy. Institution its rise. Company traditional energy Republican keep house.",
+            "deadline": "2025-03-04",
+            "is_completed": false,
+            "priority": "Middle",
+            "task_type": 7,
+            "assignees": [
+                88,
+                89,
+                90,
+                91,
+                92
+            ],
+            "project": 7,
+            "teams": [
+                8,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 88,
+        "fields": {
+            "name": "Task 88: School daughter region mind.",
+            "description": "Description for Task 88: For shoulder fear follow add drug stuff strategy. Science Republican right choose.",
+            "deadline": "2025-03-04",
+            "is_completed": false,
+            "priority": "High",
+            "task_type": 8,
+            "assignees": [
+                89,
+                90,
+                91,
+                92,
+                93
+            ],
+            "project": 8,
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 89,
+        "fields": {
+            "name": "Task 89: Development become include.",
+            "description": "Description for Task 89: Young gas ok young age federal. Either capital religious turn like purpose young.",
+            "deadline": "2025-02-22",
+            "is_completed": false,
+            "priority": "Low",
+            "task_type": 1,
+            "assignees": [
+                90,
+                91,
+                92,
+                93,
+                94
+            ],
+            "project": 1,
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 90,
+        "fields": {
+            "name": "Task 90: Industry mission fund.",
+            "description": "Description for Task 90: Certainly same play see during customer.",
+            "deadline": "2025-05-01",
+            "is_completed": false,
+            "priority": "High",
+            "task_type": 2,
+            "assignees": [
+                91,
+                92,
+                93,
+                94,
+                95
+            ],
+            "project": 2,
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 91,
+        "fields": {
+            "name": "Task 91: Far end as behavior out form in.",
+            "description": "Description for Task 91: Although participant argue. Perform today local speech.",
+            "deadline": "2025-04-12",
+            "is_completed": false,
+            "priority": "Middle",
+            "task_type": 3,
+            "assignees": [
+                96,
+                92,
+                93,
+                94,
+                95
+            ],
+            "project": 3,
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 92,
+        "fields": {
+            "name": "Task 92: Culture senior drive.",
+            "description": "Description for Task 92: Look could eat family kid.",
+            "deadline": "2025-03-21",
+            "is_completed": false,
+            "priority": "Low",
+            "task_type": 4,
+            "assignees": [
+                96,
+                97,
+                93,
+                94,
+                95
+            ],
+            "project": 4,
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 93,
+        "fields": {
+            "name": "Task 93: If continue toward prevent.",
+            "description": "Description for Task 93: Mouth despite life activity me cold audience. Ahead deep pretty.",
+            "deadline": "2025-05-07",
+            "is_completed": false,
+            "priority": "Middle",
+            "task_type": 5,
+            "assignees": [
+                96,
+                97,
+                98,
+                94,
+                95
+            ],
+            "project": 5,
+            "teams": [
+                8,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 94,
+        "fields": {
+            "name": "Task 94: Say final organization film control.",
+            "description": "Description for Task 94: Something affect game none performance. Describe organization actually west key nearly happy station. Night only career boy central officer.",
+            "deadline": "2025-04-01",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 6,
+            "assignees": [
+                96,
+                97,
+                98,
+                99,
+                95
+            ],
+            "project": 6,
+            "teams": [
+                8,
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 95,
+        "fields": {
+            "name": "Task 95: Partner environmental hear compare pull three.",
+            "description": "Description for Task 95: Every cell artist across word although age. Whom wish finish green action.",
+            "deadline": "2025-05-05",
+            "is_completed": false,
+            "priority": "High",
+            "task_type": 7,
+            "assignees": [
+                96,
+                97,
+                98,
+                99,
+                100
+            ],
+            "project": 7,
+            "teams": [
+                8,
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 96,
+        "fields": {
+            "name": "Task 96: Catch one cultural she mouth itself enter.",
+            "description": "Description for Task 96: Above no southern safe trip special could or. Lose like continue able. Consumer eight financial attorney.",
+            "deadline": "2025-05-16",
+            "is_completed": false,
+            "priority": "High",
+            "task_type": 8,
+            "assignees": [
+                97,
+                98,
+                99,
+                100,
+                1
+            ],
+            "project": 8,
+            "teams": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 97,
+        "fields": {
+            "name": "Task 97: Arm road remain different.",
+            "description": "Description for Task 97: Beat sign collection like. Notice industry mouth. Simple time store quality bank sure.",
+            "deadline": "2025-05-02",
+            "is_completed": false,
+            "priority": "Urgent",
+            "task_type": 1,
+            "assignees": [
+                1,
+                2,
+                98,
+                99,
+                100
+            ],
+            "project": 1,
+            "teams": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 98,
+        "fields": {
+            "name": "Task 98: Never behind land find top key art.",
+            "description": "Description for Task 98: Sure politics population long decide themselves policy treat. Message black after first.",
+            "deadline": "2025-04-16",
+            "is_completed": false,
+            "priority": "Middle",
+            "task_type": 2,
+            "assignees": [
+                1,
+                2,
+                3,
+                99,
+                100
+            ],
+            "project": 2,
+            "teams": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 99,
+        "fields": {
+            "name": "Task 99: Little provide ten pattern.",
+            "description": "Description for Task 99: Any interesting view need coach really first. Around information second fire task.",
+            "deadline": "2025-02-27",
+            "is_completed": false,
+            "priority": "Low",
+            "task_type": 3,
+            "assignees": [
+                1,
+                2,
+                3,
+                100,
+                4
+            ],
+            "project": 3,
+            "teams": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "manager.task",
+        "pk": 100,
+        "fields": {
+            "name": "Task 100: Show purpose pressure agreement tend.",
+            "description": "Description for Task 100: Executive most road foot. Easy pattern many across other. Home at book painting stay everybody.",
+            "deadline": "2025-05-04",
+            "is_completed": false,
+            "priority": "High",
+            "task_type": 4,
+            "assignees": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "project": 4,
+            "teams": [
+                5,
+                6,
+                7
+            ]
+        }
+    }
+]
