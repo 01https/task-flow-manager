@@ -4,7 +4,7 @@ from django.urls import path
 from manager.views import index, TaskManagementList, TaskManagementDetail, ProjectManagementDetail, ProjectManagement, \
     TeamManagement, TeamManagementDetail, help_page, CurrentUserProfile, UserProfile, TaskManagementCreate, \
     TaskManagementUpdate, TaskManagementDelete, ProjectManagementCreate, ProjectManagementUpdate, \
-    ProjectManagementDelete, TeamManagementCreate
+    ProjectManagementDelete, TeamManagementCreate, TeamManagementUpdate, TeamManagementDelete
 
 app_name = "manager"
 
@@ -28,7 +28,9 @@ urlpatterns = [
     path("project/<int:pk>/delete", ProjectManagementDelete.as_view(), name="project_delete"),
     path("team-management/", TeamManagement.as_view(), name="team_management"),
     path("team-management/<int:pk>/", TeamManagementDetail.as_view(), name="team_management_detail"),
-    path("team/create", TeamManagementCreate.as_view(), name="team_create"),
+    path("team/create/", TeamManagementCreate.as_view(), name="team_create"),
+    path("team/<int:pk>/update/", TeamManagementUpdate.as_view(), name="team_update"),
+    path("team/<int:pk>/delete/", TeamManagementDelete.as_view(), name="team_delete"),
     path("help/", help_page, name="help"),
     path("profile/", CurrentUserProfile.as_view(), name="current_profile"),
     path("profile/<int:pk>/", UserProfile.as_view(), name="user_profile")

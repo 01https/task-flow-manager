@@ -115,6 +115,7 @@ class TeamManagement(generic.ListView):
     template_name = "home/team_management.html"
 
 
+
 class TeamManagementDetail(generic.DetailView):
     model = Team
     queryset = Team.objects.all()
@@ -140,6 +141,32 @@ class TeamManagementCreate(generic.CreateView):
         return response
 
 
+class TeamManagementUpdate(generic.UpdateView):
+    model = Team
+    form_class = TeamForm
+    template_name = "home/team_form.html"
+
+    def get_success_url(self):
+        return reverse_lazy("manager:team_management_detail", kwargs={"pk": self.object.pk})
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+
+        if "members" in form.cleaned_data:
+            self.object.members.set(form.cleaned_data["members"])
+
+        if "projects" in form.cleaned_data:
+            self.object.projects_team.set(form.cleaned_data["projects"])
+
+        return response
+
+
+class TeamManagementDelete(generic.DeleteView):
+    model = Team
+    success_url = reverse_lazy("manager:team_management")
+    template_name = "home/team_confirm_delete.html"
+
+
 class CurrentUserProfile(generic.DetailView):
     model = Worker
     queryset = Worker.objects.all()
@@ -148,6 +175,7 @@ class CurrentUserProfile(generic.DetailView):
 
     def get_object(self, **kwargs):
         return Worker.objects.get(pk=self.request.user.pk)
+
 
 class UserProfile(generic.DetailView):
     model = Worker
