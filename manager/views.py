@@ -57,6 +57,21 @@ class TaskManagementCreate(generic.CreateView):
     template_name = "home/task_form.html"
 
 
+class TaskManagementUpdate(generic.UpdateView):
+    model = Task
+    form_class = TaskForm
+    template_name = "home/task_form.html"
+
+    def get_success_url(self):
+        return reverse_lazy("manager:task_management_detail", kwargs={"pk": self.object.pk})
+
+
+class TaskManagementDelete(generic.DeleteView):
+    model = Task
+    success_url = reverse_lazy("manager:task_management")
+    template_name = "home/task_confirm_delete.html"
+
+
 class ProjectManagement(generic.ListView):
     model = Project
     queryset = Project.objects.all()
