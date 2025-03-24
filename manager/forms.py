@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth import get_user_model
 from django.forms import DateInput
 
-from manager.models import Task, Team
+from manager.models import Task, Team, Project
 
 
 class TaskForm(forms.ModelForm):
@@ -11,7 +11,7 @@ class TaskForm(forms.ModelForm):
         widget=forms.SelectMultiple(attrs={'class': 'form-control select2'})
     )
     teams = forms.ModelMultipleChoiceField(
-        queryset=Team.objects.all(),
+        queryset=Team.objects,
         widget=forms.SelectMultiple(attrs={'class': 'form-control select2'})
     )
     deadline = forms.DateField(
@@ -21,3 +21,14 @@ class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
         fields = '__all__'
+
+
+class ProjectForm(forms.ModelForm):
+    teams = forms.ModelMultipleChoiceField(
+        queryset=Team.objects,
+        widget=forms.SelectMultiple(attrs={'class': 'form-control select2'})
+    )
+
+    class Meta:
+        model = Project
+        fields = "__all__"
