@@ -88,7 +88,7 @@ class Worker(AbstractUser):
 
     team = models.ForeignKey(
         Team,
-        on_delete=models.PROTECT,
+        on_delete=models.SET_NULL,
         null=True,
         blank=True,
         related_name="members",
