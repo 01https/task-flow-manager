@@ -128,6 +128,17 @@ class TeamManagementCreate(generic.CreateView):
     success_url = reverse_lazy("manager:team_management")
     template_name = "home/team_form.html"
 
+    def form_valid(self, form):
+        response = super().form_valid(form)
+
+        if "members" in form.cleaned_data:
+            self.object.members.set(form.cleaned_data["members"])
+
+        if "projects" in form.cleaned_data:
+            self.object.projects_team.set(form.cleaned_data["projects"])
+
+        return response
+
 
 class CurrentUserProfile(generic.DetailView):
     model = Worker
