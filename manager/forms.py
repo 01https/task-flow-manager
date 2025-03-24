@@ -32,3 +32,19 @@ class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
         fields = "__all__"
+
+
+class TeamForm(forms.ModelForm):
+    members = forms.ModelMultipleChoiceField(
+        queryset=get_user_model().objects.all(),
+        widget=forms.SelectMultiple(attrs={'class': 'form-control select2'})
+    )
+
+    projects = forms.ModelMultipleChoiceField(
+        queryset=Project.objects,
+        widget=forms.SelectMultiple(attrs={'class': 'form-control select2'})
+    )
+
+    class Meta:
+        model = Team
+        fields = "__all__"

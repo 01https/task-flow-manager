@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from manager.forms import TaskForm, ProjectForm
+from manager.forms import TaskForm, ProjectForm, TeamForm
 from manager.models import Task, Worker, Project, Team
 
 
@@ -120,6 +120,13 @@ class TeamManagementDetail(generic.DetailView):
     queryset = Team.objects.all()
     context_object_name = "teams"
     template_name = "home/team_management_detail.html"
+
+
+class TeamManagementCreate(generic.CreateView):
+    model = Team
+    form_class = TeamForm
+    success_url = reverse_lazy("manager:team_management")
+    template_name = "home/team_form.html"
 
 
 class CurrentUserProfile(generic.DetailView):
