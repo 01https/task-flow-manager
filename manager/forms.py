@@ -1,3 +1,5 @@
+from xmlrpc.client import FastParser
+
 from django import forms
 from django.contrib.auth import get_user_model
 from django.forms import DateInput
@@ -26,7 +28,8 @@ class TaskForm(forms.ModelForm):
 class ProjectForm(forms.ModelForm):
     teams = forms.ModelMultipleChoiceField(
         queryset=Team.objects,
-        widget=forms.SelectMultiple(attrs={'class': 'form-control select2'})
+        widget=forms.SelectMultiple(attrs={'class': 'form-control select2'}),
+        required=False
     )
 
     class Meta:
@@ -42,7 +45,8 @@ class TeamForm(forms.ModelForm):
 
     projects = forms.ModelMultipleChoiceField(
         queryset=Project.objects,
-        widget=forms.SelectMultiple(attrs={'class': 'form-control select2'})
+        widget=forms.SelectMultiple(attrs={'class': 'form-control select2'}),
+        required=False
     )
 
     class Meta:
