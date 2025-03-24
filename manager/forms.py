@@ -15,7 +15,7 @@ class TaskForm(forms.ModelForm):
         widget=forms.SelectMultiple(attrs={'class': 'form-control select2'})
     )
     deadline = forms.DateField(
-        widget=DateInput(attrs={"type": "date", "placeholder": "DD/MM/YYYY"}, format="%d/%m/%Y")
+        widget=DateInput(attrs={"type": "date", "placeholder": "DD/MM/YYYY"})
     )
 
     class Meta:
