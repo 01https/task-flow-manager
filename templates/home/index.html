@@ -48,24 +48,21 @@
                                                         <th><h5><span class="badge bg-c-blue">Task Name</span></h5></th>
                                                         <th><h5><span class="badge bg-c-blue">Project</span></h5></th>
                                                         <th><h5><span class="badge bg-c-blue">Deadline</span></h5></th>
-                                                        <th><h5><span class="badge bg-c-blue">Change status</span></h5></th>
-                                                        <th><h5><span class="badge bg-c-blue">Info</span></h5></th>
+                                                        <th><h5><span class="badge bg-c-blue">Status</span></h5></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                 {% if user_task %}
                                                   {% for task in user_task %}
                                                     <tr class="text-center">
-                                                      <td class="fs-5 fw-bold rounded-1">{{ task.name }}</td>
+                                                      <td class="fs-5 fw-bold rounded-1"><a class="link-info" href="{% url "manager:task_management_detail" pk=task.id %}">{{ task.name }}</a></td>
                                                       <td class="fs-5 fw-bold rounded-1">{{ task.project }}</td>
                                                       <td class="fs-5 fw-bold rounded-1">{{ task.deadline }}</td>
-                                                      <td>
-                                                        <a href="" class="btn btn-success border-0 fs-5 fw-bold rounded-1"><i class="feather icon-check"></i></a>
-                                                        <a href="" class="btn btn-danger border-0 fs-5 fw-bold rounded-1"><i class="feather icon-delete"></i></a>
-                                                      </td>
-                                                      <td>
-                                                        <a href="" class="btn btn-primary border-0 fs-5 fw-bold rounded-1"><i class="feather icon-info"></i></a>
-                                                      </td>
+                                                      {% if task.is_completed %}
+                                                      <td class="fs-6 fw-bold rounded-1"><span class="text-white fs-6 fw-bold rounded-1 bg-success p-1">Completed</span></td>
+                                                        {% else %}
+                                                        <td class="fs-6 fw-bold rounded-1"><span class="text-white fs-6 fw-bold rounded-1 bg-danger p-1">In process</span></td>
+                                                      {% endif %}
                                                     </tr>
                                                 {% endfor %}
                                                   {% else %}
@@ -105,7 +102,7 @@
                                                 {% if page_obj.object_list %}
                                                   {% for user in page_obj.object_list %}
                                                     <tr class="text-center">
-                                                        <td class="fs-5 fw-bold rounded-1">{{ user.username }}</td>
+                                                        <td class="fs-5 fw-bold rounded-1"><a class="link-info" href="{% url "manager:user_profile" pk=user.id %}">{{ user.username }}</a></td>
                                                         <td class="fs-5 fw-bold rounded-1">{{ user.completed_tasks_count }}
                                                             <div class="progress mt-1" style="height:4px;">
                                                                 <div class="progress-bar bg-success rounded" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
