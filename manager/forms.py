@@ -43,7 +43,7 @@ class TeamForm(forms.ModelForm):
     )
 
     projects = forms.ModelMultipleChoiceField(
-        queryset=Project.objects.all(),  # Додано .all()
+        queryset=Project.objects.all(),
         widget=forms.SelectMultiple(attrs={'class': 'form-control select2'}),
         required=False
     )
