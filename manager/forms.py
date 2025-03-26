@@ -43,7 +43,7 @@ class TeamForm(forms.ModelForm):
     )
 
     projects = forms.ModelMultipleChoiceField(
-        queryset=Project.objects,
+        queryset=Project.objects.all(),  # Додано .all()
         widget=forms.SelectMultiple(attrs={'class': 'form-control select2'}),
         required=False
     )
@@ -51,6 +51,13 @@ class TeamForm(forms.ModelForm):
     class Meta:
         model = Team
         fields = "__all__"
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        if self.instance.pk:
+            self.fields['members'].initial = self.instance.members.all()
+            self.fields['projects'].initial = self.instance.projects_team.all()
 
 
 class WorkerForm(UserChangeForm):
