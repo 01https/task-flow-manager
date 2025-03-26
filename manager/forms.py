@@ -1,8 +1,6 @@
-from xmlrpc.client import FastParser
-
 from django import forms
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserChangeForm
 from django.forms import DateInput
 
 from manager.models import Task, Team, Project, Worker
