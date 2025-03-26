@@ -33,6 +33,10 @@
                           {% include "includes/pagination.html" %}
                           <a href="{% url "manager:task_create" %}" class="btn btn-primary border-0 fs-3 fw-bold rounded-1"><i class="feather icon-plus"></i></a>
                         </div>
+                        <form action="" method="get" class="d-flex align-items-center">
+                          {{ search_form.name }}
+                          <button class="btn btn-primary border-0 fs-5 fw-bold rounded-1"><i class="feather icon-search"></i></button>
+                        </form>
                         <div class="card-body p-0">
                             <div class="tab-content" id="pills-tabContent">
                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
