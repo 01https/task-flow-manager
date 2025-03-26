@@ -16,8 +16,8 @@ def index(request):
     users = Worker.objects.annotate(
         completed_tasks_count=Count("tasks_assigned", filter=Q(tasks_assigned__is_completed=True)),
         in_progress_tasks_count=Count("tasks_assigned", filter=Q(tasks_assigned__is_completed=False))
-    ).select_related("position", "team")
-    user_task = Task.objects.filter(assignees=request.user)
+    ).select_related("position", "team").order_by("-completed_tasks_count")
+    user_task = Task.objects.filter(assignees=request.user).order_by("is_completed")
 
     paginator = Paginator(users, 10)
     page_number = request.GET.get("page")
