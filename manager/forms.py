@@ -58,7 +58,14 @@ class WorkerForm(UserChangeForm):
 
     class Meta:
         model = Worker
-        fields = ("username", "first_name", "last_name",  "position",  "email", "team")
+        fields = (
+            "username",
+            "first_name",
+            "last_name",
+            "position",
+            "email",
+            "team"
+        )
 
 
 class TaskNameSearchForm(forms.Form):

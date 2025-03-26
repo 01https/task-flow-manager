@@ -1,11 +1,17 @@
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
-from django.db.models import Count , Q
+from django.db.models import Count, Q
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from manager.forms import TaskForm, ProjectForm, TeamForm, WorkerForm, TaskNameSearchForm
+from manager.forms import (
+    TaskForm,
+    ProjectForm,
+    TeamForm,
+    WorkerForm,
+    TaskNameSearchForm
+)
 from manager.models import Task, Worker, Project, Team
 
 
@@ -13,13 +19,31 @@ from manager.models import Task, Worker, Project, Team
 def index(request):
     search_query = request.GET.get("search", "")
 
-    completed_tasks = Task.objects.filter(is_completed=True, assignees=request.user).count()
-    in_process_tasks = Task.objects.filter(is_completed=False, assignees=request.user).count()
+    completed_tasks = Task.objects.filter(
+        is_completed=True,
+        assignees=request.user
+    ).count()
+
+    in_process_tasks = Task.objects.filter(
+        is_completed=False,
+        assignees=request.user
+    ).count()
+
     users = Worker.objects.annotate(
-        completed_tasks_count=Count("tasks_assigned", filter=Q(tasks_assigned__is_completed=True)),
-        in_progress_tasks_count=Count("tasks_assigned", filter=Q(tasks_assigned__is_completed=False))
-    ).select_related("position", "team").order_by("-completed_tasks_count")
-    user_task = Task.objects.filter(assignees=request.user).order_by("is_completed")
+        completed_tasks_count=Count(
+            "tasks_assigned",
+            filter=Q(tasks_assigned__is_completed=True)),
+        in_progress_tasks_count=Count(
+            "tasks_assigned",
+            filter=Q(tasks_assigned__is_completed=False))
+    ).select_related(
+        "position",
+        "team"
+    ).order_by("-completed_tasks_count")
+
+    user_task = Task.objects.filter(
+        assignees=request.user
+    ).order_by("is_completed")
 
     if search_query:
         users = users.filter(
@@ -39,7 +63,6 @@ def index(request):
         "search_query": search_query
     }
 
-
     return render(request, "home/index.html", context=context)
 
 
@@ -51,7 +74,7 @@ class TaskManagementList(generic.ListView):
     paginate_by = 10
 
     def get_context_data(
-        self, *, object_list = ..., **kwargs
+        self, *, object_list=..., **kwargs
     ):
         context = super(TaskManagementList, self).get_context_data(**kwargs)
 
@@ -87,7 +110,10 @@ class TaskManagementUpdate(generic.UpdateView):
     template_name = "home/task_form.html"
 
     def get_success_url(self):
-        return reverse_lazy("manager:task_management_detail", kwargs={"pk": self.object.pk})
+        return reverse_lazy(
+            "manager:task_management_detail",
+            kwargs={"pk": self.object.pk}
+        )
 
 
 class TaskManagementDelete(generic.DeleteView):
@@ -123,7 +149,10 @@ class ProjectManagementUpdate(generic.UpdateView):
     template_name = "home/project_form.html"
 
     def get_success_url(self):
-        return reverse_lazy("manager:project_management_detail", kwargs={"pk": self.object.pk})
+        return reverse_lazy(
+            "manager:project_management_detail",
+            kwargs={"pk": self.object.pk}
+        )
 
 
 class ProjectManagementDelete(generic.DeleteView):
@@ -137,7 +166,6 @@ class TeamManagement(generic.ListView):
     queryset = Team.objects.all()
     context_object_name = "teams"
     template_name = "home/team_management.html"
-
 
 
 class TeamManagementDetail(generic.DetailView):
@@ -171,7 +199,10 @@ class TeamManagementUpdate(generic.UpdateView):
     template_name = "home/team_form.html"
 
     def get_success_url(self):
-        return reverse_lazy("manager:team_management_detail", kwargs={"pk": self.object.pk})
+        return reverse_lazy(
+            "manager:team_management_detail",
+            kwargs={"pk": self.object.pk}
+        )
 
     def form_valid(self, form):
         response = super().form_valid(form)
@@ -214,7 +245,10 @@ class CurrentUserProfileUpdate(generic.UpdateView):
     template_name = "home/worker_form.html"
 
     def get_success_url(self):
-        return reverse_lazy("manager:user_profile", kwargs={"pk": self.object.pk})
+        return reverse_lazy(
+            "manager:user_profile",
+            kwargs={"pk": self.object.pk}
+        )
 
     def get_object(self, **kwargs):
         return self.request.user
