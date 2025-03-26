@@ -11,6 +11,8 @@ from manager.models import Task, Worker, Project, Team
 
 @login_required
 def index(request):
+    search_query = request.GET.get("search", "")
+
     completed_tasks = Task.objects.filter(is_completed=True, assignees=request.user).count()
     in_process_tasks = Task.objects.filter(is_completed=False, assignees=request.user).count()
     users = Worker.objects.annotate(
@@ -18,6 +20,11 @@ def index(request):
         in_progress_tasks_count=Count("tasks_assigned", filter=Q(tasks_assigned__is_completed=False))
     ).select_related("position", "team").order_by("-completed_tasks_count")
     user_task = Task.objects.filter(assignees=request.user).order_by("is_completed")
+
+    if search_query:
+        users = users.filter(
+            username__icontains=search_query
+        )
 
     paginator = Paginator(users, 10)
     page_number = request.GET.get("page")
@@ -29,6 +36,7 @@ def index(request):
         "completed_tasks": completed_tasks,
         "in_process_tasks": in_process_tasks,
         "user_task": user_task,
+        "search_query": search_query
     }
 
 
