@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from manager.forms import TaskForm, ProjectForm, TeamForm, WorkerForm
+from manager.forms import TaskForm, ProjectForm, TeamForm, WorkerForm, TaskNameSearchForm
 from manager.models import Task, Worker, Project, Team
 
 
@@ -41,6 +41,22 @@ class TaskManagementList(generic.ListView):
     context_object_name = "tasks"
     template_name = "home/task_management.html"
     paginate_by = 10
+
+    def get_context_data(
+        self, *, object_list = ..., **kwargs
+    ):
+        context = super(TaskManagementList, self).get_context_data(**kwargs)
+
+        context["search_form"] = TaskNameSearchForm()
+        return context
+
+    def get_queryset(self):
+        name = self.request.GET.get("name")
+
+        if name:
+            return self.queryset.filter(name__icontains=name)
+
+        return self.queryset
 
 
 class TaskManagementDetail(generic.DetailView):
