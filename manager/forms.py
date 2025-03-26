@@ -59,3 +59,16 @@ class WorkerForm(UserChangeForm):
     class Meta:
         model = Worker
         fields = ("username", "first_name", "last_name",  "position",  "email", "team")
+
+
+class TaskNameSearchForm(forms.Form):
+    name = forms.CharField(
+        max_length=255,
+        required=False,
+        widget=forms.TextInput(attrs={
+            "placeholder": "Search... (name)",
+            "class": "form-control",
+            "style": "width: 300px;"
+        }),
+        label=""
+    )
