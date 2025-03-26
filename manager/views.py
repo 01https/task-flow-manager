@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.db.models import Count, Q
 from django.shortcuts import render
@@ -66,7 +67,7 @@ def index(request):
     return render(request, "home/index.html", context=context)
 
 
-class TaskManagementList(generic.ListView):
+class TaskManagementList(LoginRequiredMixin, generic.ListView):
     model = Task
     queryset = Task.objects.all().order_by("is_completed")
     context_object_name = "tasks"
@@ -90,21 +91,21 @@ class TaskManagementList(generic.ListView):
         return self.queryset
 
 
-class TaskManagementDetail(generic.DetailView):
+class TaskManagementDetail(LoginRequiredMixin, generic.DetailView):
     model = Task
     queryset = Task.objects.all()
     context_object_name = "tasks"
     template_name = "home/task_management_detail.html"
 
 
-class TaskManagementCreate(generic.CreateView):
+class TaskManagementCreate(LoginRequiredMixin, generic.CreateView):
     model = Task
     form_class = TaskForm
     success_url = reverse_lazy("manager:task_management")
     template_name = "home/task_form.html"
 
 
-class TaskManagementUpdate(generic.UpdateView):
+class TaskManagementUpdate(LoginRequiredMixin, generic.UpdateView):
     model = Task
     form_class = TaskForm
     template_name = "home/task_form.html"
@@ -116,34 +117,34 @@ class TaskManagementUpdate(generic.UpdateView):
         )
 
 
-class TaskManagementDelete(generic.DeleteView):
+class TaskManagementDelete(LoginRequiredMixin, generic.DeleteView):
     model = Task
     success_url = reverse_lazy("manager:task_management")
     template_name = "home/task_confirm_delete.html"
 
 
-class ProjectManagement(generic.ListView):
+class ProjectManagement(LoginRequiredMixin, generic.ListView):
     model = Project
     queryset = Project.objects.all()
     context_object_name = "projects"
     template_name = "home/project_management.html"
 
 
-class ProjectManagementDetail(generic.DetailView):
+class ProjectManagementDetail(LoginRequiredMixin, generic.DetailView):
     model = Project
     queryset = Project.objects.all()
     context_object_name = "projects"
     template_name = "home/project_management_detail.html"
 
 
-class ProjectManagementCreate(generic.CreateView):
+class ProjectManagementCreate(LoginRequiredMixin, generic.CreateView):
     model = Project
     form_class = ProjectForm
     success_url = reverse_lazy("manager:project_management")
     template_name = "home/project_form.html"
 
 
-class ProjectManagementUpdate(generic.UpdateView):
+class ProjectManagementUpdate(LoginRequiredMixin, generic.UpdateView):
     model = Project
     form_class = ProjectForm
     template_name = "home/project_form.html"
@@ -155,27 +156,27 @@ class ProjectManagementUpdate(generic.UpdateView):
         )
 
 
-class ProjectManagementDelete(generic.DeleteView):
+class ProjectManagementDelete(LoginRequiredMixin, generic.DeleteView):
     model = Project
     success_url = reverse_lazy("manager:project_management")
     template_name = "home/project_confirm_delete.html"
 
 
-class TeamManagement(generic.ListView):
+class TeamManagement(LoginRequiredMixin, generic.ListView):
     model = Team
     queryset = Team.objects.all()
     context_object_name = "teams"
     template_name = "home/team_management.html"
 
 
-class TeamManagementDetail(generic.DetailView):
+class TeamManagementDetail(LoginRequiredMixin, generic.DetailView):
     model = Team
     queryset = Team.objects.all()
     context_object_name = "teams"
     template_name = "home/team_management_detail.html"
 
 
-class TeamManagementCreate(generic.CreateView):
+class TeamManagementCreate(LoginRequiredMixin, generic.CreateView):
     model = Team
     form_class = TeamForm
     success_url = reverse_lazy("manager:team_management")
@@ -193,7 +194,7 @@ class TeamManagementCreate(generic.CreateView):
         return response
 
 
-class TeamManagementUpdate(generic.UpdateView):
+class TeamManagementUpdate(LoginRequiredMixin, generic.UpdateView):
     model = Team
     form_class = TeamForm
     template_name = "home/team_form.html"
@@ -216,13 +217,13 @@ class TeamManagementUpdate(generic.UpdateView):
         return response
 
 
-class TeamManagementDelete(generic.DeleteView):
+class TeamManagementDelete(LoginRequiredMixin, generic.DeleteView):
     model = Team
     success_url = reverse_lazy("manager:team_management")
     template_name = "home/team_confirm_delete.html"
 
 
-class CurrentUserProfile(generic.DetailView):
+class CurrentUserProfile(LoginRequiredMixin, generic.DetailView):
     model = Worker
     queryset = Worker.objects.all()
     context_object_name = "user"
@@ -232,14 +233,14 @@ class CurrentUserProfile(generic.DetailView):
         return Worker.objects.get(pk=self.request.user.pk)
 
 
-class UserProfile(generic.DetailView):
+class UserProfile(LoginRequiredMixin, generic.DetailView):
     model = Worker
     queryset = Worker.objects.all()
     context_object_name = "user"
     template_name = "home/user_profile.html"
 
 
-class CurrentUserProfileUpdate(generic.UpdateView):
+class CurrentUserProfileUpdate(LoginRequiredMixin, generic.UpdateView):
     model = Worker
     form_class = WorkerForm
     template_name = "home/worker_form.html"
@@ -254,5 +255,6 @@ class CurrentUserProfileUpdate(generic.UpdateView):
         return self.request.user
 
 
+@login_required
 def help_page(request):
     return render(request, "home/help.html")
