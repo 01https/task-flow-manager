@@ -1,0 +1,77 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Sample page {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+	<!-- [ Main Content ] start -->
+	<div class="pcoded-main-container">
+		<div class="pcoded-content">
+			<!-- [ Main Content ] start -->
+			<div class="row">
+				<!-- [ sample-page ] start -->
+				<div class="col-sm-12">
+					<div class="card">
+
+						<div class="card-header">
+							<div class="card-header-right">
+								<div class="btn-group card-option">
+								</div>
+							</div>
+						</div>
+						<div class="card-body">
+              <ul class="breadcrumb">
+								<li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+								<li class="breadcrumb-item"><a href="#">Help</a></li>
+							</ul>
+							<h1 class="text-center text-primary">Welcome to the Task Manager for IT Companies</h1>
+                <p class="lead text-center">An intuitive way to manage tasks, projects, and teams efficiently.</p>
+
+                <h3 class="mt-4 text-c-blue">Navigation</h3>
+                <p>In the navigation menu, you will find the following sections:</p>
+                <ul class="list-group">
+                    <li class="list-group-item">Home</li>
+                    <li class="list-group-item">Task Manager</li>
+                    <li class="list-group-item">Project Manager</li>
+                    <li class="list-group-item">Team Manager</li>
+                </ul>
+
+                <h4 class="mt-4 text-c-blue">Home Page</h4>
+                <p>Your personal space where you can see your task statistics, both completed and in progress.</p>
+                <p>Additionally, there is a dedicated table displaying tasks assigned specifically to you.</p>
+                <p>At the bottom of the page, you will find a table with information about other employees. Clicking on their username allows you to view their profile.</p>
+
+                <h4 class="mt-4 text-c-blue">My Profile</h4>
+                <p>Here, you can edit your profile and update your personal information.</p>
+
+                <h4 class="mt-4 text-c-blue">Task Manager</h4>
+                <p>You can flexibly create tasks, assign different executors, teams, and link tasks to specific projects.</p>
+
+                <h4 class="mt-4 text-c-blue">Team Manager</h4>
+                <p>Create teams with an unlimited number of participants and assign projects for them to work on collaboratively.</p>
+
+                <h4 class="mt-4 text-c-blue">Project Manager</h4>
+                <p>Easily create projects with descriptions and access detailed project information.</p>
+
+                <h4 class="mt-4 text-c-blue">Full Control</h4>
+                <p>In all sections mentioned above, you have full control to <strong>Create</strong>, <strong>Edit</strong>, <strong>Delete</strong>, and <strong>Manage</strong> as you wish.</p>
+
+                <h4 class="mt-4 text-center text-c-blue">Thank You!</h4>
+                <p class="text-center">Thank you for checking out this pet project. I appreciate your time, and I hope you enjoy testing it!</p>
+						</div>
+					</div>
+				</div>
+				<!-- [ sample-page ] end -->
+			</div>
+			<!-- [ Main Content ] end -->
+		</div>
+	</div>
+	<!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

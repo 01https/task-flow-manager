@@ -1,0 +1,57 @@
+{% extends "layouts/base.html" %}
+{% load crispy_forms_filters %}
+
+{% block title %} Sample page {% endblock %}
+
+{% block stylesheets %}
+    <!-- Підключаємо стилі Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet">
+    <style>
+        html, body {
+        overflow-x: hidden;
+        }
+
+    .pcoded-main-container, .pcoded-content, .card-body {
+        overflow-x: hidden;
+        }
+    </style>
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>{{ object|yesno:"Update,Create" }} Project</h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="post" novalidate>
+                            {% csrf_token %}
+                            {{ form|crispy }}
+
+                            <input type="submit" value="Submit" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block javascripts %}
+    <!-- Підключаємо jQuery та Select2 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2({
+                placeholder: "Select an option",
+                allowClear: true
+            });
+        });
+    </script>
+{% endblock javascripts %}

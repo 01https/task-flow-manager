@@ -1,0 +1,55 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Typography {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+	<!-- [ Main Content ] start -->
+	<div class="pcoded-main-container">
+		<div class="pcoded-content">
+			<!-- [ Main Content ] start -->
+			<div class="row">
+              <div class="card">
+                <div class="card-body">
+                  <ul class="breadcrumb">
+								    <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+								    <li class="breadcrumb-item"><a href="{% url "manager:team_management" %}">Team Management</a></li>
+							    </ul>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="card-title fw-bold"><i class="feather icon-users"></i> Team: <span class="fw-normal">{{ teams.name }}</span></h5>
+                    <div class="d-flex gap-2">
+                      <a href="{% url "manager:team_update" pk=teams.id %}" class="btn btn-primary border-0 fs-5 fw-bold rounded-1"><i class="feather icon-edit"></i></a>
+                      <a href="{% url "manager:team_delete" pk=teams.id %}" class="btn btn-danger border-0 fs-5 fw-bold rounded-1"><i class="feather icon-delete"></i></a>
+                    </div>
+                  </div>
+                  <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-user"></i> Members:</strong>
+                    {% for user in teams.members.all %}
+                      <a class="link-info" href="{% url "manager:user_profile" pk=user.id %}">@{{ user.username }}</a> |
+                    {% endfor %}
+                  </p>
+                  <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-folder "></i> Project:</strong>
+                    {% for project in teams.projects_team.all %}
+                    	{{ project.name }} |
+                    {% endfor %}
+
+                  </p>
+                  <p class="mb-1 fs-5 w-50"><strong><i class="feather icon-layers"></i>  Tasks in team:</strong> {{ teams.tasks_team.count }}</p>
+                  <hr>
+                  <p class="mb-0 fs-5 w-50"><i class="feather icon-info"></i><strong> Description:</strong></p>
+                  <p class="w-50 fs-5">{{ teams.description }}</p>
+                </div>
+                </div>
+        </div>
+			</div>
+			<!-- [ Main Content ] end -->
+
+		</div>
+	<!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

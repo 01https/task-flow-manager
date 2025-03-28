@@ -1,0 +1,45 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Sample page {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+	<!-- [ Main Content ] start -->
+	<div class="pcoded-main-container">
+		<div class="pcoded-content">
+			<!-- [ Main Content ] start -->
+			<div class="row">
+				<!-- [ sample-page ] start -->
+				<div class="col-sm-12">
+					<div class="card">
+
+						<div class="card-header">
+							<h4>Are you sure?</h4>
+							<div class="card-header-right">
+								<div class="btn-group card-option">
+								</div>
+							</div>
+						</div>
+						<div class="card-body">
+              <form action="" method="post">
+                {% csrf_token %}
+
+              <input type="submit" value="Yes" class="btn btn-danger">
+              </form>
+						</div>
+					</div>
+				</div>
+				<!-- [ sample-page ] end -->
+			</div>
+			<!-- [ Main Content ] end -->
+		</div>
+	</div>
+	<!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

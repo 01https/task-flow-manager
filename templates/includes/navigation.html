@@ -1,0 +1,63 @@
+
+	<!-- [ Header ] start -->
+	<header class="navbar pcoded-header navbar-expand-lg navbar-light headerpos-fixed header-blue">
+		
+			
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse" href="#"><span></span></a>
+            <a href="#" class="b-brand">
+                <!-- ========   change your logo hear   ============ -->
+              <h5><span class="badge bg-c-blue">TaskFlow Manager</span></h5>
+            </a>
+            <a href="#" class="mob-toggler">
+                <i class="feather icon-more-vertical"></i>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a href="#" class="pop-search"></a>
+                    <div class="search-bar">
+                        <button type="button" class="btn-close" aria-label="Close">
+                        </button>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li>
+                    <div class="dropdown drp-user">
+                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                            <span class="text-white">{{ request.user.username }} <i class="feather icon-user"></i></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end profile-notification">
+                            <div class="pro-head">
+
+                                <span>
+                                   Hi , {{ request.user.username }}
+                                </span>
+                            </div>
+                            <ul class="pro-body">
+                              <li>
+                                    <a href="{% url "manager:current_profile" %}"
+                                       class="dropdown-item"><i
+                                            class="feather icon-user"></i>My Profile</a>
+                              </li>
+                              <hr>
+                              <li>
+                                <form action="{% url "logout" %}" method="post">
+                                  {% csrf_token %}
+                                  <button type="submit" class="dropdown-item">
+                                    Log out
+                                  </button>
+                                </form>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    
+</header>
+<!-- [ Header ] end -->

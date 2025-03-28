@@ -1,0 +1,83 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Apex Charts {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">
+                                  {% if request.user == user %}
+                                  	My Profile
+                                    {% else %}
+                                    Profile: {{ user.username }}
+                                  {% endif %}
+                                </h5>
+                            </div>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="#">
+                                  {% if request.user == user %}
+                                  	My Profile
+                                    {% else %}
+                                    Profile: {{ user.username }}
+                                  {% endif %}
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <!-- [ Main Content ] start -->
+            <div class="row">
+                <!-- [ feather-icon ] start -->
+    <div class="row justify-content-start">
+        <div class="col-md-6 col-lg-4">
+            <!-- User Profile Card -->
+            <div class="card">
+                <div class="card-body">
+                    <!-- Username -->
+                    <h3 class="card-title text-center mb-3"><i class="feather icon-user"></i>{{ user.username }}</h3>
+
+                    <!-- Full Name -->
+                    <p class="fs-5 mb-2"><i class="feather icon-edit-2"></i><strong> Full Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+
+                    <!-- Position -->
+                    <p class="fs-5 mb-2"><i class="feather icon-star"></i><strong> Position:</strong> {{ user.position }}</p>
+
+                    <p class="fs-5 mb-2"><i class="feather icon-mail"></i><strong> E-mail:</strong> {{ user.email }}</p>
+                    <!-- Team -->
+                    <p class="fs-5 mb-2"><i class="feather icon-users"></i><strong> Team:</strong> {{ user.team }}</p>
+
+
+
+                </div>
+
+                <!-- Button -->
+                {% if request.user == user %}
+                  <div class="card-footer text-center">
+                    <a href="{% url "manager:current_profile_update" pk=request.user.id %}" class="btn btn-primary w-100">Edit Profile</a>
+                  </div>
+                {% endif %}
+            </div>
+        </div>
+</div>
+                <!-- [ feather-icon ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
