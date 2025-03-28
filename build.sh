@@ -13,3 +13,6 @@ python manage.py collectstatic --no-input
 
 # Apply any outstanding database migrations
 python manage.py migrate
+
+# Add test-data
+python manage.py loaddata data.json
