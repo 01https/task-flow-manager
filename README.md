@@ -7,6 +7,10 @@
 - **Data Management:** Add, edit, delete, and view information about positions, workers, teams, and projects.
 - **Data Export and Import:** Supports working with JSON fixtures for testing or data migration.
 
+## Check in out!
+
+### [TaskFlow Manager deployed to Render](https://task-flow-manager-fqkl.onrender.com)
+
 ## Technologies Used
 - **Backend:** Django Framework
 - **Frontend:** HTML, CSS (with Bootstrap for responsive design)
@@ -29,21 +33,20 @@
 3. Install dependencies:
     ```bash
    pip install -r requirements.txt
-4. Create database migrations:
-    ```bash
-   python manage.py makemigrations
-5. Apply database migrations:
+
+4. Apply database migrations:
     ```bash
    python manage.py migrate
-6. Start the development server:
+5. Start the development server:
     ```bash
    python manage.py runserver
-7. To load test data into the database, use the following command:
+6. To load test data into the database, use the following command:
     ```bash
    python manage.py loaddata data.json
-8. Create user:
-    ```bash
-   python manage.py createsuperuser
-   
+
+### Default admin credentials:
+- **Username:** user
+- **Password:** user
+
 ## Diagram
 ![img.png](static/assets/images/diagram.png)
